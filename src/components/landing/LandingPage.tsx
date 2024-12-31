@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { 
-  Brain, 
-  ArrowRight, 
   Sparkles,
   Map,
   Target,
@@ -11,6 +9,7 @@ import {
   Users,
   TrendingUp 
 } from 'lucide-react';
+import { Logo } from '@/design-system/logo';
 
 const LandingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,10 +28,7 @@ const LandingPage = () => {
         isScrolled ? 'bg-gray-900/80 backdrop-blur-lg' : 'bg-transparent'
       }`}>
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Brain className="h-8 w-8 text-blue-400" />
-            <span className="text-xl font-bold text-gray-200">MindflowOS</span>
-          </div>
+          <Logo variant="dark" size="md" letterSpacing="-0.04" />
           <button className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg hover:shadow-blue-500/20 transition-all">
             Join Waitlist
           </button>
@@ -67,7 +63,7 @@ const LandingPage = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: Brain,
+                icon: Sparkles,
                 title: "AI-Powered Strategy",
                 description: "Transform planning from periodic exercises into continuous optimization"
               },
@@ -141,10 +137,7 @@ const LandingPage = () => {
       <footer className="py-12 border-t border-gray-800">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Brain className="h-6 w-6 text-blue-400" />
-              <span className="text-gray-200">MindflowOS</span>
-            </div>
+            <Logo variant="dark" size="lg" letterSpacing="-0.04" />
             <div className="text-gray-400 text-sm">
               © 2024 MindflowOS. All rights reserved.
             </div>
