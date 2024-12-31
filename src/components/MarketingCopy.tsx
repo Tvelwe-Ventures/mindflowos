@@ -1,9 +1,9 @@
 import React from 'react';
-import { KeyBenefits } from './KeyBenefits';
-import { UseCases } from './UseCases';
-import { AIFeatures } from './AIFeatures';
-import { Integrations } from './Integrations';
-import { CallToAction } from './CallToAction';
+import { KeyBenefits } from './marketing/KeyBenefits';
+import { UseCases } from './marketing/UseCases';
+import { AIFeatures } from './marketing/AIFeatures';
+import { Integrations } from './marketing/Integrations';
+import { CallToAction } from './marketing/CallToAction';
 
 const MarketingCopy = () => {
   return (
