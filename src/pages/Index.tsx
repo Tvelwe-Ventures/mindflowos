@@ -14,7 +14,7 @@ const Index = () => {
           <img 
             src="/lovable-uploads/2ed47fb1-e6cc-49dd-947c-6531a64de4f3.png" 
             alt="MindflowOS Logo" 
-            className="h-16 w-auto mx-auto mb-8"
+            className="h-16 w-auto mx-auto mb-8 animate-float"
           />
           <span className="inline-block px-3 py-1 text-sm font-medium bg-accent/10 text-accent rounded-full mb-8">
             Coming Soon
@@ -80,7 +80,7 @@ const Index = () => {
           <img 
             src="/lovable-uploads/2ed47fb1-e6cc-49dd-947c-6531a64de4f3.png" 
             alt="MindflowOS Logo" 
-            className="h-12 w-auto mx-auto mb-8"
+            className="h-12 w-auto mx-auto mb-8 animate-float"
           />
           <p className="text-gray-600 mb-8">
             Join us in revolutionizing business planning
