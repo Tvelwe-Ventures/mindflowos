@@ -45,7 +45,7 @@ export const WaitlistForm = () => {
       <Alert className="max-w-md mx-auto bg-green-500/10 border-green-500/20 text-green-500">
         <Check className="h-5 w-5" />
         <AlertDescription className="text-lg">
-          Thank you for joining our waitlist! We'll be in touch soon with exclusive updates about MindflowOS.
+          Great thanks! We're excited to have you join our waitlist. You'll receive an email shortly with more details about MindflowOS.
         </AlertDescription>
       </Alert>
     );
