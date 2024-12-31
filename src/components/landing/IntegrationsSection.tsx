@@ -9,22 +9,22 @@ type Integration = {
 const integrations: Integration[] = [
   {
     name: 'Notion',
-    logo: '/lovable-uploads/ab05ec08-abc2-4e78-8239-9da024d25ae3.png',
+    logo: '/lovable-uploads/c8a2f903-f0c6-4873-b4d4-cccc9aca5f17.png',
     color: '#E6E6E6'
   },
   {
     name: 'Slack',
-    logo: '/lovable-uploads/cae65443-27f9-4293-91c0-69d4c272e9a7.png',
+    logo: '/lovable-uploads/f8ef7c1e-bb8a-4afb-ab15-c5e776d91a1c.png',
     color: '#ECE5FF'
   },
   {
     name: 'Asana',
-    logo: '/lovable-uploads/18b98a39-0f31-4f71-8bac-b5e9d81b6373.png',
+    logo: '/lovable-uploads/fa48a5b5-8f53-47c2-ad61-0fee223335f6.png',
     color: '#FFE5EC'
   },
   {
     name: 'GitHub',
-    logo: '/lovable-uploads/6619ce1c-8ec2-4c6a-a229-c522d7ae4e55.png',
+    logo: '/lovable-uploads/913cf55d-7b38-42d7-80c3-e7c4b2e9f28b.png',
     color: '#E5F6FF'
   }
 ];
@@ -45,19 +45,22 @@ export const IntegrationsSection = () => {
           {integrations.map((tool) => (
             <div 
               key={tool.name}
-              className="p-6 rounded-lg border border-purple-500/20 flex items-center justify-center transform hover:scale-105 transition-all duration-300 group"
+              className="relative p-6 rounded-lg border border-purple-500/20 flex items-center justify-center transform hover:scale-105 transition-all duration-300 group overflow-hidden"
               style={{ 
                 background: 'linear-gradient(145deg, rgba(139, 92, 246, 0.15), rgba(88, 28, 135, 0.25))',
                 boxShadow: '0 4px 20px rgba(139, 92, 246, 0.15)'
               }}
             >
-              <div className="bg-gray-900/90 p-3 rounded-lg group-hover:bg-gray-900 transition-colors">
+              <div className="relative z-10 bg-gray-900/90 p-3 rounded-lg group-hover:bg-gray-900 transition-colors">
                 <img 
                   src={tool.logo} 
                   alt={`${tool.name} logo`}
                   className="h-8 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
                 />
               </div>
+              <div 
+                className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
             </div>
           ))}
         </div>
