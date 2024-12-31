@@ -131,4 +131,4 @@ const AIFeatures = () => {
   );
 };
 
-export { AIFeatures };
+export default AIFeatures;
