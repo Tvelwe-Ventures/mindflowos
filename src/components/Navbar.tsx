@@ -22,11 +22,9 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/2ed47fb1-e6cc-49dd-947c-6531a64de4f3.png" 
-              alt="MindflowOS Logo" 
-              className="h-8 w-auto"
-            />
+            <span className="text-xl font-semibold text-gray-900">
+              Mind<span className="text-blue-600">flow</span>OS
+            </span>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
