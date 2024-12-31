@@ -10,7 +10,7 @@ interface TransformationSectionProps {
   status: string;
 }
 
-export const TransformationSection: React.FC<TransformationSectionProps> = ({ section, status }) => {
+const TransformationSection = ({ section, status }: TransformationSectionProps) => {
   const getStatusColor = (status: string) => {
     switch(status) {
       case 'complete': return 'bg-green-100 text-green-800';
@@ -39,3 +39,5 @@ export const TransformationSection: React.FC<TransformationSectionProps> = ({ se
     </div>
   );
 };
+
+export default TransformationSection;

@@ -1,11 +1,3 @@
-export const transformationStatus = {
-  executiveSummary: 'complete',
-  marketAnalysis: 'complete',
-  financials: 'processing',
-  operations: 'pending',
-  strategy: 'pending'
-};
-
 export const sections = [
   { 
     id: 'executiveSummary',
@@ -33,3 +25,11 @@ export const sections = [
     elements: ['Growth Plan', 'Risk Analysis', 'Success Metrics']
   }
 ];
+
+export const initialTransformationStatus = {
+  executiveSummary: 'complete',
+  marketAnalysis: 'complete',
+  financials: 'processing',
+  operations: 'pending',
+  strategy: 'pending'
+};

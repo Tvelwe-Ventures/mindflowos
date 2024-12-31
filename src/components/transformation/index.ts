@@ -1,4 +1,3 @@
-export { default as TransformationInterface } from './TransformationInterface';
-export * from './TransformationSection';
-export * from './TransformationProgress';
+export { default as TransformationSection } from './TransformationSection';
+export { default as TransformationProgress } from './TransformationProgress';
 export * from './transformationData';

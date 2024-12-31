@@ -1,7 +1,7 @@
 import React from 'react';
 import { FileText, ArrowRight, Map } from 'lucide-react';
 
-export const TransformationProgress = () => {
+const TransformationProgress = () => {
   return (
     <div className="flex items-center justify-center mb-6 text-gray-500">
       <FileText className="h-8 w-8" />
@@ -10,3 +10,5 @@ export const TransformationProgress = () => {
     </div>
   );
 };
+
+export default TransformationProgress;
