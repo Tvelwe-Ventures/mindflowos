@@ -45,22 +45,15 @@ export const IntegrationsSection = () => {
           {integrations.map((tool) => (
             <div 
               key={tool.name}
-              className="relative p-6 rounded-lg border border-purple-500/20 flex items-center justify-center transform hover:scale-105 transition-all duration-300 group overflow-hidden"
-              style={{ 
-                background: 'linear-gradient(145deg, rgba(139, 92, 246, 0.15), rgba(88, 28, 135, 0.25))',
-                boxShadow: '0 4px 20px rgba(139, 92, 246, 0.15)'
-              }}
+              className="relative p-6 flex items-center justify-center transform hover:scale-105 transition-all duration-300 group"
             >
-              <div className="relative z-10 bg-gray-900/90 p-3 rounded-lg group-hover:bg-gray-900 transition-colors">
+              <div className="relative z-10">
                 <img 
                   src={tool.logo} 
                   alt={`${tool.name} logo`}
                   className="h-8 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
                 />
               </div>
-              <div 
-                className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
             </div>
           ))}
         </div>
