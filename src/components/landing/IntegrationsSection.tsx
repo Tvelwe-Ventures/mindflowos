@@ -47,11 +47,11 @@ export const IntegrationsSection = () => {
               key={tool.name}
               className="relative p-6 flex items-center justify-center transform hover:scale-105 transition-all duration-300 group"
             >
-              <div className="relative z-10">
+              <div className="relative z-10 w-[120px] h-[40px] flex items-center justify-center">
                 <img 
                   src={tool.logo} 
                   alt={`${tool.name} logo`}
-                  className="h-8 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
+                  className="max-w-full max-h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity"
                 />
               </div>
             </div>
