@@ -23,7 +23,7 @@ export const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/7e2ff79e-0efe-46c2-9519-d1c4c00646cf.png" 
+              src="/lovable-uploads/2ed47fb1-e6cc-49dd-947c-6531a64de4f3.png" 
               alt="MindflowOS Logo" 
               className="h-8 w-auto"
             />
