@@ -2,6 +2,9 @@ import { Brain, Sparkles, Plus } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { DemoSection } from "@/components/DemoSection";
 import { WaitlistForm } from "@/components/WaitlistForm";
+import { SectionVisualizer } from "@/components/SectionVisualizer";
+import { EquityManagement } from "@/components/EquityManagement";
+import { PerformanceTracker } from "@/components/PerformanceTracker";
 
 const Index = () => {
   return (
@@ -29,6 +32,27 @@ const Index = () => {
             operating systems. Visualize, adapt, and execute your strategy in real-time.
           </p>
           <WaitlistForm />
+        </div>
+      </section>
+
+      {/* Business Plan Sections */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <SectionVisualizer />
+        </div>
+      </section>
+
+      {/* Equity Management */}
+      <section className="py-12 px-4">
+        <div className="max-w-7xl mx-auto">
+          <EquityManagement />
+        </div>
+      </section>
+
+      {/* Performance Tracking */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <PerformanceTracker />
         </div>
       </section>
 
