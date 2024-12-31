@@ -82,7 +82,7 @@ const LandingPage = () => {
           </div>
         </section>
 
-        {/* Feature Highlights with Animations */}
+      {/* Feature Highlights with Animations */}
         <section className="py-20 bg-gray-900/50">
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-8">
@@ -128,36 +128,35 @@ const LandingPage = () => {
           </div>
         </section>
 
-        {/* Integration Section with Logos */}
-        <section className="py-20">
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="text-center mb-12 animate-fade-up">
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
-                Seamless Integration
-              </h2>
-              <p className="text-gray-400">
-                Connect with your existing tools and workflows
-              </p>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {integrations.map((tool, index) => (
-                <div 
-                  key={tool.name}
-                  className="p-6 bg-gray-900/50 rounded-lg border border-gray-800 flex items-center justify-center transform hover:scale-105 transition-all duration-300 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/5 animate-fade-up group"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <img 
-                    src={tool.logo} 
-                    alt={`${tool.name} logo`}
-                    className="h-8 w-auto opacity-70 group-hover:opacity-100 transition-opacity"
-                  />
-                </div>
-              ))}
-            </div>
+      {/* Integration Section with Logos */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12 animate-fade-up">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
+              Seamless Integration
+            </h2>
+            <p className="text-gray-400">
+              Connect with your existing tools and workflows
+            </p>
           </div>
-        </section>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {integrations.map((tool, index) => (
+              <div 
+                key={tool.name}
+                className="p-6 bg-gray-800/20 backdrop-blur-sm rounded-lg border border-gray-800 flex items-center justify-center transform hover:scale-105 transition-all duration-300 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/5 animate-fade-up group"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <img 
+                  src={tool.logo} 
+                  alt={`${tool.name} logo`}
+                  className="h-8 w-auto opacity-70 group-hover:opacity-100 transition-opacity"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-b from-gray-900 to-gray-950">
           <div className="max-w-3xl mx-auto px-4 text-center animate-fade-up">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
