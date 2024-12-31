@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { Check } from "lucide-react";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
 export const WaitlistForm = () => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -23,6 +26,7 @@ export const WaitlistForm = () => {
         description: "You've been added to our waitlist. Check your email for confirmation!",
       });
 
+      setIsSubmitted(true);
       setEmail("");
     } catch (error: any) {
       console.error("Error joining waitlist:", error);
@@ -35,6 +39,17 @@ export const WaitlistForm = () => {
       setIsLoading(false);
     }
   };
+
+  if (isSubmitted) {
+    return (
+      <Alert className="max-w-md mx-auto bg-green-500/10 border-green-500/20 text-green-500">
+        <Check className="h-5 w-5" />
+        <AlertDescription className="text-lg">
+          Thank you for joining our waitlist! We'll be in touch soon with exclusive updates about MindflowOS.
+        </AlertDescription>
+      </Alert>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit} className="max-w-md mx-auto">
