@@ -1,7 +1,7 @@
 import React from 'react';
 import { KeyBenefits } from './KeyBenefits';
 import { UseCases } from './UseCases';
-import { AIFeatures } from './AIFeatures';
+import AIFeatures from './AIFeatures';
 import { Integrations } from './Integrations';
 import { CallToAction } from './CallToAction';
 
