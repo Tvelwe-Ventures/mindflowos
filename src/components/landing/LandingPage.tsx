@@ -68,7 +68,7 @@ const LandingPage = () => {
           <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-overlay filter blur-3xl opacity-10 animate-blob" />
           <div className="absolute top-20 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-overlay filter blur-3xl opacity-10 animate-blob animation-delay-2000" />
           
-          <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
+          <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
             <div className="space-y-6 animate-fade-up">
               <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-clip-text text-transparent"
                   style={{ letterSpacing: '-0.04em' }}>
@@ -84,9 +84,9 @@ const LandingPage = () => {
           </div>
         </section>
 
-      {/* Feature Highlights with Animations */}
+        {/* Feature Highlights with Animations */}
         <section className="py-20 bg-gray-900/50">
-          <div className="max-w-6xl mx-auto px-4">
+          <div className="max-w-3xl mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
@@ -130,69 +130,54 @@ const LandingPage = () => {
           </div>
         </section>
 
-      {/* Integration Section with Logos */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fade-up">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
-              Seamless Integration
-            </h2>
-            <p className="text-gray-400">
-              Connect with your existing tools and workflows
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {integrations.map((tool, index) => (
-              <div 
-                key={tool.name}
-                className="p-6 bg-gray-800/20 backdrop-blur-sm rounded-lg border border-gray-800 flex items-center justify-center transform hover:scale-105 transition-all duration-300 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/5 animate-fade-up group"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <img 
-                  src={tool.logo} 
-                  alt={`${tool.name} logo`}
-                  className="h-8 w-auto opacity-70 group-hover:opacity-100 transition-opacity"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-        <section className="py-20 bg-gradient-to-b from-gray-900 to-gray-950">
-          <div className="max-w-3xl mx-auto px-4 text-center animate-fade-up">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
-              Ready to Transform Your Business Planning?
-            </h2>
-            <p className="text-gray-400 mb-8">
-              Join the exclusive waitlist and be among the first to experience the future 
-              of business strategy.
-            </p>
-            <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl hover:shadow-lg hover:shadow-blue-500/20 transition-all transform hover:scale-105">
-              Join Waitlist
-            </button>
+        {/* Integration Section with Logos */}
+        <section className="py-20">
+          <div className="max-w-3xl mx-auto px-4">
+            <div className="text-center mb-12 animate-fade-up">
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
+                Seamless Integration
+              </h2>
+              <p className="text-gray-400">
+                Connect with your existing tools and workflows
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {integrations.map((tool, index) => (
+                <div 
+                  key={tool.name}
+                  className="p-6 bg-gray-800/20 backdrop-blur-sm rounded-lg border border-gray-800 flex items-center justify-center transform hover:scale-105 transition-all duration-300 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/5 animate-fade-up group"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <img 
+                    src={tool.logo} 
+                    alt={`${tool.name} logo`}
+                    className="h-8 w-auto opacity-70 group-hover:opacity-100 transition-opacity"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
-      </div>
 
-      {/* Footer */}
-      <footer className="py-8 border-t border-gray-800 mt-auto">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <img 
-                src="/lovable-uploads/1932d00e-ca29-46e7-bf2f-59ae839a236a.png" 
-                alt="MindflowOS Logo" 
-                className="h-6 w-auto" 
-              />
-              <span className="text-[#9b87f5]">MindflowOS</span>
-            </div>
-            <div className="text-gray-400 text-sm">
-              © 2024 MindflowOS. All rights reserved.
+        {/* Footer */}
+        <footer className="mt-auto py-8 border-t border-gray-800">
+          <div className="max-w-3xl mx-auto px-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <img 
+                  src="/lovable-uploads/1932d00e-ca29-46e7-bf2f-59ae839a236a.png" 
+                  alt="MindflowOS Logo" 
+                  className="h-6 w-auto" 
+                />
+                <span className="text-[#9b87f5]">MindflowOS</span>
+              </div>
+              <div className="text-gray-400 text-sm">
+                © 2024 MindflowOS. All rights reserved.
+              </div>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
   );
 };
