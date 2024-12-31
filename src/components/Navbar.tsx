@@ -1,8 +1,21 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
+import { AuthModal } from "./AuthModal";
+import { Button } from "./ui/button";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const { user, signOut } = useAuth();
+
+  const handleAuthClick = () => {
+    if (user) {
+      signOut();
+    } else {
+      setShowAuthModal(true);
+    }
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
@@ -19,9 +32,12 @@ export const Navbar = () => {
             <a href="#demo" className="text-gray-600 hover:text-gray-900 transition-colors">
               Demo
             </a>
-            <button className="px-4 py-2 text-white bg-accent rounded-lg hover:bg-accent/90 transition-colors">
-              Join Waitlist
-            </button>
+            <Button
+              variant={user ? "outline" : "default"}
+              onClick={handleAuthClick}
+            >
+              {user ? "Sign out" : "Sign in"}
+            </Button>
           </div>
 
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
@@ -45,12 +61,18 @@ export const Navbar = () => {
             >
               Demo
             </a>
-            <button className="w-full mt-2 px-4 py-2 text-white bg-accent rounded-lg hover:bg-accent/90">
-              Join Waitlist
-            </button>
+            <Button
+              variant={user ? "outline" : "default"}
+              onClick={handleAuthClick}
+              className="w-full"
+            >
+              {user ? "Sign out" : "Sign in"}
+            </Button>
           </div>
         </div>
       )}
+
+      <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
     </nav>
   );
 };
