@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { 
-  Sparkles,
   Globe,
   Users,
   TrendingUp 
@@ -50,61 +49,6 @@ const LandingPage = () => {
           </p>
           <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl hover:shadow-lg hover:shadow-blue-500/20 transition-all transform hover:scale-105">
             Get Early Access
-          </button>
-        </div>
-      </section>
-
-      {/* Feature Highlights */}
-      <section className="py-20 bg-gray-900/50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Sparkles,
-                title: "AI-Powered Strategy",
-                description: "Transform planning from periodic exercises into continuous optimization"
-              },
-              {
-                icon: Globe,
-                title: "Dynamic Execution",
-                description: "Adapt and evolve your strategy in real-time as market conditions change"
-              },
-              {
-                icon: Users,
-                title: "Team Alignment",
-                description: "Keep your entire organization synchronized with your strategic vision"
-              }
-            ].map((feature, index) => (
-              <Card key={index} className="border-gray-800 bg-gray-900/50 backdrop-blur-xl hover:shadow-lg hover:shadow-blue-500/5 transition-all">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl border border-blue-500/20">
-                      <feature.icon className="h-6 w-6 text-blue-400" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-200">
-                      {feature.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-400">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-gray-950">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
-            Ready to Transform Your Business Planning?
-          </h2>
-          <p className="text-gray-400 mb-8">
-            Join the exclusive waitlist and be among the first to experience the future 
-            of business strategy.
-          </p>
-          <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl hover:shadow-lg hover:shadow-blue-500/20 transition-all transform hover:scale-105">
-            Join Waitlist
           </button>
         </div>
       </section>
