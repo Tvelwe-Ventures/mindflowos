@@ -43,14 +43,78 @@ const handler = async (req: Request): Promise<Response> => {
       body: JSON.stringify({
         from: "MindflowOS <onboarding@resend.dev>",
         to: [email],
-        subject: "Welcome to MindflowOS Waitlist!",
+        subject: "Welcome to the MindflowOS Journey! 🚀",
         html: `
-          <h1>Welcome to MindflowOS!</h1>
-          <p>Thank you for joining our waitlist. We're excited to have you on board!</p>
-          <p>We'll keep you updated on our progress and let you know as soon as we launch.</p>
-          <br>
-          <p>Best regards,</p>
-          <p>The MindflowOS Team</p>
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <style>
+                body {
+                  font-family: Arial, sans-serif;
+                  line-height: 1.6;
+                  color: #333;
+                  max-width: 600px;
+                  margin: 0 auto;
+                  padding: 20px;
+                }
+                .header {
+                  background: linear-gradient(135deg, #9b87f5 0%, #6f4ff2 100%);
+                  color: white;
+                  padding: 30px;
+                  border-radius: 10px;
+                  text-align: center;
+                  margin-bottom: 30px;
+                }
+                .content {
+                  background: #f9f9f9;
+                  padding: 30px;
+                  border-radius: 10px;
+                  margin-bottom: 20px;
+                }
+                .footer {
+                  text-align: center;
+                  color: #666;
+                  font-size: 14px;
+                  margin-top: 30px;
+                }
+                .button {
+                  display: inline-block;
+                  padding: 12px 24px;
+                  background: linear-gradient(135deg, #9b87f5 0%, #6f4ff2 100%);
+                  color: white;
+                  text-decoration: none;
+                  border-radius: 5px;
+                  margin: 20px 0;
+                }
+              </style>
+            </head>
+            <body>
+              <div class="header">
+                <h1>Welcome to MindflowOS! 🎉</h1>
+              </div>
+              
+              <div class="content">
+                <p>Hi there,</p>
+                
+                <p>Thank you for joining the MindflowOS waitlist! We're thrilled to have you on board as we build the future of mind mapping and knowledge organization.</p>
+                
+                <p>What's next?</p>
+                <ul>
+                  <li>You'll be among the first to know when we launch</li>
+                  <li>Get exclusive early access to new features</li>
+                  <li>Receive updates about our development progress</li>
+                </ul>
+                
+                <p>In the meantime, follow us on social media to stay updated:</p>
+                <a href="https://twitter.com/mindflowos" class="button">Follow us on Twitter</a>
+              </div>
+              
+              <div class="footer">
+                <p>Best regards,<br>The MindflowOS Team</p>
+                <p>If you didn't sign up for MindflowOS, please ignore this email.</p>
+              </div>
+            </body>
+          </html>
         `,
       }),
     });
