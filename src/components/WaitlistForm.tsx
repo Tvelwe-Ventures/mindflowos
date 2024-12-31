@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 export const WaitlistForm = () => {
   const [email, setEmail] = useState("");
@@ -10,16 +11,29 @@ export const WaitlistForm = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const { error } = await supabase.functions.invoke("process-waitlist", {
+        body: { email },
+      });
 
-    toast({
-      title: "Success!",
-      description: "You've been added to our waitlist. We'll be in touch soon!",
-    });
+      if (error) throw error;
 
-    setEmail("");
-    setIsLoading(false);
+      toast({
+        title: "Success!",
+        description: "You've been added to our waitlist. Check your email for confirmation!",
+      });
+
+      setEmail("");
+    } catch (error: any) {
+      console.error("Error joining waitlist:", error);
+      toast({
+        title: "Error",
+        description: "Failed to join waitlist. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (

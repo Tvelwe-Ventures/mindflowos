@@ -1,1 +1,4 @@
 project_id = "hjlbhoyxsdidzqbubquf"
+
+[functions.process-waitlist]
+verify_jwt = false
