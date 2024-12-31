@@ -25,7 +25,6 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950">
-      {/* Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-gray-900/80 backdrop-blur-lg' : 'bg-transparent'
       }`}>
@@ -153,7 +152,7 @@ const LandingPage = () => {
         </div>
       </footer>
 
-      <style jsx>{`
+      <style>{`
         @keyframes blob {
           0% { transform: translate(0px, 0px) scale(1); }
           33% { transform: translate(30px, -50px) scale(1.1); }

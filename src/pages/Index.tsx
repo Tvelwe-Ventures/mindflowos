@@ -4,11 +4,11 @@ import { DemoSection } from "@/components/DemoSection";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { SectionVisualizer } from "@/components/section-visualizer";
 import { EquityManagement } from "@/components/equity/EquityManagement";
-import { PerformanceTracker } from "@/components/performance/PerformanceTracker";
-import { MarketingCopy } from "@/components/MarketingCopy";
-import { EnhancedShowcase } from "@/components/EnhancedShowcase";
-import { ThemeSystem } from "@/components/theme/ThemeSystem";
-import { LandingPage } from "@/components/landing/LandingPage";
+import PerformanceTracker from "@/components/performance/PerformanceTracker";
+import MarketingCopy from "@/components/MarketingCopy";
+import EnhancedShowcase from "@/components/EnhancedShowcase";
+import ThemeSystem from "@/components/theme/ThemeSystem";
+import LandingPage from "@/components/landing/LandingPage";
 
 const Index = () => {
   return (
