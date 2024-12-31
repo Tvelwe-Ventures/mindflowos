@@ -11,6 +11,11 @@ const Index = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-24 px-4">
         <div className="max-w-7xl mx-auto text-center">
+          <img 
+            src="/lovable-uploads/2ed47fb1-e6cc-49dd-947c-6531a64de4f3.png" 
+            alt="MindflowOS Logo" 
+            className="h-16 w-auto mx-auto mb-8"
+          />
           <span className="inline-block px-3 py-1 text-sm font-medium bg-accent/10 text-accent rounded-full mb-8">
             Coming Soon
           </span>
@@ -72,6 +77,11 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-secondary py-12 px-4">
         <div className="max-w-7xl mx-auto text-center">
+          <img 
+            src="/lovable-uploads/2ed47fb1-e6cc-49dd-947c-6531a64de4f3.png" 
+            alt="MindflowOS Logo" 
+            className="h-12 w-auto mx-auto mb-8"
+          />
           <p className="text-gray-600 mb-8">
             Join us in revolutionizing business planning
           </p>
