@@ -5,13 +5,15 @@ import { WaitlistForm } from "@/components/WaitlistForm";
 import { SectionVisualizer } from "@/components/SectionVisualizer";
 import { EquityManagement } from "@/components/EquityManagement";
 import PerformanceTracker from "@/components/PerformanceTracker";
-import { MarketingCopy } from "@/components/MarketingCopy";
+import MarketingCopy from "@/components/MarketingCopy";
+import EnhancedShowcase from "@/components/EnhancedShowcase";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
       <MarketingCopy />
+      <EnhancedShowcase />
       <DemoSection />
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
