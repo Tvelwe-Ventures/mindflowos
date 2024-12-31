@@ -2,7 +2,7 @@ import React from 'react';
 import LandingPage from "@/components/landing/LandingPage";
 import { BusinessStrategy } from "@/components/home/BusinessStrategy";
 import { DepartmentSection } from "@/components/home/DepartmentSection";
-import { SectionVisualizer } from "@/components/section-visualizer/SectionVisualizer";
+import SectionVisualizer from "@/components/section-visualizer/SectionVisualizer";
 import { EquityManagement } from "@/components/equity/EquityManagement";
 import PerformanceTracker from "@/components/performance/PerformanceTracker";
 
