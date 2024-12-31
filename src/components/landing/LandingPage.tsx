@@ -148,7 +148,7 @@ const LandingPage = () => {
           </div>
         </section>
 
-        {/* Enhanced Integration Section with better visibility */}
+        {/* Enhanced Integration Section with colored cards */}
         <section className="py-20">
           <div className="max-w-3xl mx-auto px-4">
             <div className="text-center mb-12 animate-fade-up">
@@ -163,10 +163,9 @@ const LandingPage = () => {
               {integrations.map((tool, index) => (
                 <div 
                   key={tool.name}
-                  className="p-6 backdrop-blur-sm rounded-lg border border-gray-800 flex items-center justify-center transform hover:scale-105 transition-all duration-300 hover:shadow-lg group"
+                  className="p-6 rounded-lg border border-[#8B5CF6]/20 flex items-center justify-center transform hover:scale-105 transition-all duration-300 hover:shadow-lg group bg-[#8B5CF6]/10 backdrop-blur-sm hover:bg-[#8B5CF6]/15"
                   style={{ 
-                    backgroundColor: `${tool.color}10`,
-                    boxShadow: `0 4px 20px ${tool.color}10`
+                    boxShadow: '0 4px 20px rgba(139, 92, 246, 0.1)'
                   }}
                 >
                   <div className="bg-white/90 p-3 rounded-lg">
