@@ -5,7 +5,7 @@ import {
   Globe,
   Users
 } from 'lucide-react';
-import { Logo } from '@/design-system/logo';
+import { WaitlistForm } from '@/components/WaitlistForm';
 
 const LandingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,14 +19,17 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950">
       {/* Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-gray-900/80 backdrop-blur-lg' : 'bg-transparent'
       }`}>
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Logo variant="dark" size="md" letterSpacing="-0.04" />
-          <button className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg hover:shadow-blue-500/20 transition-all">
+          <div className="flex items-center gap-2">
+            <Brain className="h-8 w-8 text-blue-400" />
+            <span className="text-xl font-bold text-gray-200">MindflowOS</span>
+          </div>
+          <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg hover:shadow-blue-500/20 transition-all text-sm">
             Join Waitlist
           </button>
         </div>
@@ -48,9 +51,7 @@ const LandingPage = () => {
             Join innovative companies using MindflowOS to transform static business 
             plans into dynamic, AI-powered operating systems.
           </p>
-          <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl hover:shadow-lg hover:shadow-blue-500/20 transition-all transform hover:scale-105">
-            Get Early Access
-          </button>
+          <WaitlistForm />
         </div>
       </section>
 
@@ -124,17 +125,17 @@ const LandingPage = () => {
             Join the exclusive waitlist and be among the first to experience the future 
             of business strategy.
           </p>
-          <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl hover:shadow-lg hover:shadow-blue-500/20 transition-all transform hover:scale-105">
+          <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl hover:shadow-lg hover:shadow-blue-500/20 transition-all transform hover:scale-105">
             Join Waitlist
           </button>
         </div>
       </section>
 
-      {/* Spacer to push footer to bottom if content is short */}
+      {/* Push footer to bottom */}
       <div className="flex-grow" />
 
       {/* Footer */}
-      <footer className="mt-auto py-12 border-t border-gray-800">
+      <footer className="mt-auto py-8 border-t border-gray-800">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -148,22 +149,20 @@ const LandingPage = () => {
         </div>
       </footer>
 
-      <style>
-        {`
-          @keyframes blob {
-            0% { transform: translate(0px, 0px) scale(1); }
-            33% { transform: translate(30px, -50px) scale(1.1); }
-            66% { transform: translate(-20px, 20px) scale(0.9); }
-            100% { transform: translate(0px, 0px) scale(1); }
-          }
-          .animate-blob {
-            animation: blob 7s infinite;
-          }
-          .animation-delay-2000 {
-            animation-delay: 2s;
-          }
-        `}
-      </style>
+      <style>{`
+        @keyframes blob {
+          0% { transform: translate(0px, 0px) scale(1); }
+          33% { transform: translate(30px, -50px) scale(1.1); }
+          66% { transform: translate(-20px, 20px) scale(0.9); }
+          100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+          animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+      `}</style>
     </div>
   );
 };

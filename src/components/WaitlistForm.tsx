@@ -30,13 +30,13 @@ export const WaitlistForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
-          className="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent/50"
+          className="flex-1 px-4 py-2 rounded-lg border border-gray-700 bg-gray-800/50 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 text-sm"
           required
         />
         <button
           type="submit"
           disabled={isLoading}
-          className="px-6 py-2 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors disabled:opacity-50"
+          className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg hover:shadow-blue-500/20 transition-all disabled:opacity-50 text-sm whitespace-nowrap"
         >
           {isLoading ? "Joining..." : "Join Waitlist"}
         </button>
