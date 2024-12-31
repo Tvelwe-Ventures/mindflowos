@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { FileText, Map, ArrowRight, CheckCircle } from 'lucide-react';
-import { TransformationSection } from './TransformationSection';
-import { TransformationProgress } from './TransformationProgress';
-import { sections, transformationStatus } from './transformationData';
+import { FileText, Map, ArrowRight } from 'lucide-react';
+import TransformationSection from './TransformationSection';
+import TransformationProgress from './TransformationProgress';
+import { sections, initialTransformationStatus } from './transformationData';
 
 const TransformationInterface = () => {
   return (
@@ -22,7 +22,7 @@ const TransformationInterface = () => {
               <TransformationSection 
                 key={section.id}
                 section={section}
-                status={transformationStatus[section.id]}
+                status={initialTransformationStatus[section.id]}
               />
             ))}
           </div>

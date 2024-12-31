@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronDown, ChevronRight } from 'lucide-react';
+import { ChevronDown, ChevronRight, FileText } from 'lucide-react';
 import { renderSectionStatus } from './utils';
 import { renderMetrics, renderSubsections } from './SectionContent';
 import { Section } from './types';
