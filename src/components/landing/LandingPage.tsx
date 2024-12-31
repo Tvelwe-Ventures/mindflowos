@@ -44,13 +44,15 @@ const LandingPage = () => {
         isScrolled ? 'bg-gray-900/80 backdrop-blur-lg' : 'bg-transparent'
       }`}>
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <img 
-              src="/lovable-uploads/7e2ff79e-0efe-46c2-9519-d1c4c00646cf.png" 
+              src="/lovable-uploads/1932d00e-ca29-46e7-bf2f-59ae839a236a.png" 
               alt="MindflowOS Logo" 
-              className="h-8 w-auto animate-float"
+              className="h-8 w-auto"
             />
-            <span className="text-xl font-bold text-gray-200">MindflowOS</span>
+            <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              MindflowOS
+            </span>
           </div>
           <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg hover:shadow-blue-500/20 transition-all text-sm">
             Join Waitlist
