@@ -1,5 +1,4 @@
 import React from 'react';
-import { Brain } from 'lucide-react';
 
 interface LogoProps {
   variant?: 'light' | 'dark';
@@ -10,7 +9,7 @@ interface LogoProps {
 export const Logo: React.FC<LogoProps> = ({ 
   variant = 'light', 
   size = 'md',
-  letterSpacing = '-0.02'
+  letterSpacing = '-0.04'
 }) => {
   const sizes = {
     sm: 'text-2xl',
@@ -19,29 +18,31 @@ export const Logo: React.FC<LogoProps> = ({
   };
 
   const iconSizes = {
-    sm: 'h-6 w-6',
-    md: 'h-8 w-8',
-    lg: 'h-10 w-10'
+    sm: 'h-6',
+    md: 'h-8',
+    lg: 'h-10'
   };
 
   const colors = {
     light: {
-      icon: 'text-blue-600',
       text: 'text-gray-900',
       accent: 'text-blue-600'
     },
     dark: {
-      icon: 'text-blue-400',
       text: 'text-white',
       accent: 'text-blue-400'
     }
   };
 
   return (
-    <div className="flex items-center gap-3">
-      <Brain className={`${iconSizes[size]} ${colors[variant].icon}`} />
+    <div className="flex items-center gap-2">
+      <img 
+        src="/lovable-uploads/5954d802-45d2-43b3-8cb0-218d6da1b02c.png" 
+        alt="MindflowOS Logo" 
+        className={`${iconSizes[size]} w-auto`}
+      />
       <span 
-        className={`${sizes[size]} font-semibold ${colors[variant].text}`}
+        className={`${sizes[size]} font-semibold ${colors[variant].text} font-space-grotesk`}
         style={{ letterSpacing: `${letterSpacing}em` }}
       >
         Mind<span className={colors[variant].accent}>flow</span>OS

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Brain, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import { typography, colors } from '@/design-system';
 import { Logo } from '@/design-system/logo';
 
@@ -16,9 +16,9 @@ const BrandSystem = () => {
           <div className="space-y-8">
             {/* Brand Name */}
             <div className="mb-8">
-              <Logo size="md" />
+              <Logo size="md" letterSpacing="-0.04" />
               <div className="text-sm text-gray-600 mt-2">
-                Space Grotesk / SemiBold 600 / Tracking -0.02em
+                Space Grotesk / SemiBold 600 / Tracking -0.04em
               </div>
             </div>
 
@@ -122,7 +122,7 @@ const BrandSystem = () => {
             <div>
               <h3 className="text-sm font-medium text-gray-700 mb-4">Feature Cards</h3>
               <div className="bg-white p-6 rounded-xl border max-w-sm">
-                <Brain className="h-6 w-6 text-blue-600 mb-4" />
+                <Sparkles className="h-6 w-6 text-blue-600 mb-4" />
                 <h3 className={`${typography.headings.h4} mb-2`}>
                   AI-Powered Insights
                 </h3>
