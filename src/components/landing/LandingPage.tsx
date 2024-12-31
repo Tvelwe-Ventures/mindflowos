@@ -21,19 +21,23 @@ const LandingPage = () => {
   const integrations = [
     {
       name: 'Notion',
-      logo: '/lovable-uploads/ab05ec08-abc2-4e78-8239-9da024d25ae3.png'
+      logo: '/lovable-uploads/ab05ec08-abc2-4e78-8239-9da024d25ae3.png',
+      color: '#E6E6E6'
     },
     {
       name: 'Slack',
-      logo: '/lovable-uploads/cae65443-27f9-4293-91c0-69d4c272e9a7.png'
+      logo: '/lovable-uploads/cae65443-27f9-4293-91c0-69d4c272e9a7.png',
+      color: '#ECE5FF'
     },
     {
       name: 'Asana',
-      logo: '/lovable-uploads/18b98a39-0f31-4f71-8bac-b5e9d81b6373.png'
+      logo: '/lovable-uploads/18b98a39-0f31-4f71-8bac-b5e9d81b6373.png',
+      color: '#FFE5EC'
     },
     {
       name: 'GitHub',
-      logo: '/lovable-uploads/6619ce1c-8ec2-4c6a-a229-c522d7ae4e55.png'
+      logo: '/lovable-uploads/6619ce1c-8ec2-4c6a-a229-c522d7ae4e55.png',
+      color: '#E5F6FF'
     }
   ];
 
@@ -64,13 +68,13 @@ const LandingPage = () => {
       <div className="flex-grow flex flex-col">
         {/* Hero Section */}
         <section className="pt-32 pb-20 relative overflow-hidden">
-          {/* Animated Gradient Orbs */}
-          <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-overlay filter blur-3xl opacity-10 animate-blob" />
-          <div className="absolute top-20 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-overlay filter blur-3xl opacity-10 animate-blob animation-delay-2000" />
+          {/* Animated Gradient Orbs with enhanced colors */}
+          <div className="absolute top-20 left-1/4 w-96 h-96 bg-[#8B5CF6] rounded-full mix-blend-overlay filter blur-3xl opacity-20 animate-blob" />
+          <div className="absolute top-20 right-1/4 w-96 h-96 bg-[#D946EF] rounded-full mix-blend-overlay filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
           
           <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
             <div className="space-y-6 animate-fade-up">
-              <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-clip-text text-transparent"
+              <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#8B5CF6] via-[#D946EF] to-[#0EA5E9] bg-clip-text text-transparent"
                   style={{ letterSpacing: '-0.04em' }}>
                 Transform Your Business Strategy
                 <span className="block mt-2">Into a Living System</span>
@@ -84,39 +88,53 @@ const LandingPage = () => {
           </div>
         </section>
 
-        {/* Feature Highlights with Animations */}
-        <section className="py-20 bg-gray-900/50">
-          <div className="max-w-3xl mx-auto px-4">
+        {/* Feature Highlights with enhanced visuals */}
+        <section className="py-20 bg-gray-900/50 relative overflow-hidden">
+          {/* Additional decorative elements */}
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7')] opacity-5 bg-cover bg-center" />
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 to-gray-900/95" />
+          
+          <div className="max-w-3xl mx-auto px-4 relative z-10">
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
                   title: "AI-Powered Strategy",
                   description: "Transform planning from periodic exercises into continuous optimization",
+                  color: "#8B5CF6",
                   delay: 0
                 },
                 {
                   icon: Globe,
                   title: "Dynamic Execution",
                   description: "Adapt and evolve your strategy in real-time as market conditions change",
+                  color: "#D946EF",
                   delay: 100
                 },
                 {
                   icon: Users,
                   title: "Team Alignment",
                   description: "Keep your entire organization synchronized with your strategic vision",
+                  color: "#0EA5E9",
                   delay: 200
                 }
               ].map((feature, index) => (
                 <Card 
                   key={index} 
-                  className="border-gray-800 bg-gray-900/50 backdrop-blur-xl hover:shadow-lg hover:shadow-blue-500/5 transition-all transform hover:scale-105 duration-300 animate-fade-up"
-                  style={{ animationDelay: `${feature.delay}ms` }}
+                  className="border-gray-800 bg-gray-900/50 backdrop-blur-xl hover:shadow-lg transition-all transform hover:scale-105 duration-300 animate-fade-up"
+                  style={{ 
+                    animationDelay: `${feature.delay}ms`,
+                    boxShadow: `0 4px 20px ${feature.color}10`
+                  }}
                 >
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="p-3 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl border border-blue-500/20 group-hover:border-blue-500/40 transition-colors">
-                        <feature.icon className="h-6 w-6 text-blue-400" />
+                      <div className="p-3 rounded-xl border transition-colors"
+                           style={{ 
+                             backgroundColor: `${feature.color}15`,
+                             borderColor: `${feature.color}30`
+                           }}>
+                        <feature.icon className="h-6 w-6" style={{ color: feature.color }} />
                       </div>
                       <h3 className="text-lg font-semibold text-gray-200">
                         {feature.title}
@@ -130,11 +148,11 @@ const LandingPage = () => {
           </div>
         </section>
 
-        {/* Integration Section with Logos */}
+        {/* Enhanced Integration Section with better visibility */}
         <section className="py-20">
           <div className="max-w-3xl mx-auto px-4">
             <div className="text-center mb-12 animate-fade-up">
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9] bg-clip-text text-transparent mb-4">
                 Seamless Integration
               </h2>
               <p className="text-gray-400">
@@ -145,21 +163,26 @@ const LandingPage = () => {
               {integrations.map((tool, index) => (
                 <div 
                   key={tool.name}
-                  className="p-6 bg-gray-800/20 backdrop-blur-sm rounded-lg border border-gray-800 flex items-center justify-center transform hover:scale-105 transition-all duration-300 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/5 animate-fade-up group"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className="p-6 backdrop-blur-sm rounded-lg border border-gray-800 flex items-center justify-center transform hover:scale-105 transition-all duration-300 hover:shadow-lg group"
+                  style={{ 
+                    backgroundColor: `${tool.color}10`,
+                    boxShadow: `0 4px 20px ${tool.color}10`
+                  }}
                 >
-                  <img 
-                    src={tool.logo} 
-                    alt={`${tool.name} logo`}
-                    className="h-8 w-auto opacity-70 group-hover:opacity-100 transition-opacity"
-                  />
+                  <div className="bg-white/90 p-3 rounded-lg">
+                    <img 
+                      src={tool.logo} 
+                      alt={`${tool.name} logo`}
+                      className="h-8 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
+                    />
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Footer */}
+        {/* Footer with proper positioning */}
         <footer className="mt-auto py-8 border-t border-gray-800">
           <div className="max-w-3xl mx-auto px-4">
             <div className="flex items-center justify-between">
