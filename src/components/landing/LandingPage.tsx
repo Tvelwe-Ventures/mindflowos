@@ -50,7 +50,7 @@ const LandingPage = () => {
               alt="MindflowOS Logo" 
               className="h-8 w-auto"
             />
-            <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+            <span className="text-xl font-bold text-[#9b87f5]">
               MindflowOS
             </span>
           </div>
@@ -181,11 +181,11 @@ const LandingPage = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <img 
-                src="/lovable-uploads/7e2ff79e-0efe-46c2-9519-d1c4c00646cf.png" 
+                src="/lovable-uploads/1932d00e-ca29-46e7-bf2f-59ae839a236a.png" 
                 alt="MindflowOS Logo" 
                 className="h-6 w-auto" 
               />
-              <span className="text-gray-200">MindflowOS</span>
+              <span className="text-[#9b87f5]">MindflowOS</span>
             </div>
             <div className="text-gray-400 text-sm">
               © 2024 MindflowOS. All rights reserved.
