@@ -1,17 +1,20 @@
-import { Brain, Sparkles, Plus } from "lucide-react";
+import React from 'react';
 import { Navbar } from "@/components/Navbar";
 import { DemoSection } from "@/components/DemoSection";
 import { WaitlistForm } from "@/components/WaitlistForm";
-import { SectionVisualizer } from "@/components/SectionVisualizer";
+import { SectionVisualizer } from "@/components/section-visualizer";
 import { EquityManagement } from "@/components/equity/EquityManagement";
-import PerformanceTracker from "@/components/performance/PerformanceTracker";
-import MarketingCopy from "@/components/MarketingCopy";
-import EnhancedShowcase from "@/components/EnhancedShowcase";
+import { PerformanceTracker } from "@/components/performance/PerformanceTracker";
+import { MarketingCopy } from "@/components/MarketingCopy";
+import { EnhancedShowcase } from "@/components/EnhancedShowcase";
+import { ThemeSystem } from "@/components/theme/ThemeSystem";
+import { LandingPage } from "@/components/landing/LandingPage";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
+      <LandingPage />
       <MarketingCopy />
       <EnhancedShowcase />
       <DemoSection />
@@ -28,6 +31,11 @@ const Index = () => {
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <PerformanceTracker />
+        </div>
+      </section>
+      <section className="py-12 px-4">
+        <div className="max-w-7xl mx-auto">
+          <ThemeSystem />
         </div>
       </section>
       <footer className="bg-secondary py-12 px-4">
