@@ -3,8 +3,8 @@ import { Navbar } from "@/components/Navbar";
 import { DemoSection } from "@/components/DemoSection";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { SectionVisualizer } from "@/components/SectionVisualizer";
-import { EquityManagement } from "@/components/EquityManagement";
-import PerformanceTracker from "@/components/PerformanceTracker";
+import { EquityManagement } from "@/components/equity/EquityManagement";
+import PerformanceTracker from "@/components/performance/PerformanceTracker";
 import MarketingCopy from "@/components/MarketingCopy";
 import EnhancedShowcase from "@/components/EnhancedShowcase";
 
