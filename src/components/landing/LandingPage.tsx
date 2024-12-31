@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { 
   Sparkles,
-  Map,
-  Target,
-  CheckCircle2,
   Globe,
   Users,
   TrendingUp 
@@ -91,27 +88,6 @@ const LandingPage = () => {
                   <p className="text-gray-400">{feature.description}</p>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Integration Section */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
-              Seamless Integration
-            </h2>
-            <p className="text-gray-400">
-              Connect with your existing tools and workflows
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['Notion', 'Slack', 'Asana', 'GitHub'].map((tool) => (
-              <div key={tool} className="p-4 bg-gray-900/50 rounded-lg border border-gray-800 text-center">
-                <span className="text-gray-300">{tool}</span>
-              </div>
             ))}
           </div>
         </div>
