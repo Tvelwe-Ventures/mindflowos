@@ -3,7 +3,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { 
   Globe,
   Users,
-  TrendingUp 
+  TrendingUp,
+  Brain 
 } from 'lucide-react';
 import { Logo } from '@/design-system/logo';
 
@@ -19,7 +20,8 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950">
+    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 flex flex-col">
+      {/* Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-gray-900/80 backdrop-blur-lg' : 'bg-transparent'
       }`}>
@@ -53,11 +55,93 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* Feature Highlights */}
+      <section className="py-20 bg-gray-900/50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Brain,
+                title: "AI-Powered Strategy",
+                description: "Transform planning from periodic exercises into continuous optimization"
+              },
+              {
+                icon: Globe,
+                title: "Dynamic Execution",
+                description: "Adapt and evolve your strategy in real-time as market conditions change"
+              },
+              {
+                icon: Users,
+                title: "Team Alignment",
+                description: "Keep your entire organization synchronized with your strategic vision"
+              }
+            ].map((feature, index) => (
+              <Card key={index} className="border-gray-800 bg-gray-900/50 backdrop-blur-xl hover:shadow-lg hover:shadow-blue-500/5 transition-all">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl border border-blue-500/20">
+                      <feature.icon className="h-6 w-6 text-blue-400" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-200">
+                      {feature.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-400">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Integration Section */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
+              Seamless Integration
+            </h2>
+            <p className="text-gray-400">
+              Connect with your existing tools and workflows
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {['Notion', 'Slack', 'Asana', 'GitHub'].map((tool) => (
+              <div key={tool} className="p-4 bg-gray-900/50 rounded-lg border border-gray-800 text-center">
+                <span className="text-gray-300">{tool}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-900 to-gray-950">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
+            Ready to Transform Your Business Planning?
+          </h2>
+          <p className="text-gray-400 mb-8">
+            Join the exclusive waitlist and be among the first to experience the future 
+            of business strategy.
+          </p>
+          <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl hover:shadow-lg hover:shadow-blue-500/20 transition-all transform hover:scale-105">
+            Join Waitlist
+          </button>
+        </div>
+      </section>
+
+      {/* Spacer to push footer to bottom if content is short */}
+      <div className="flex-grow" />
+
       {/* Footer */}
-      <footer className="py-12 border-t border-gray-800">
+      <footer className="mt-auto py-12 border-t border-gray-800">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-between">
-            <Logo variant="dark" size="lg" letterSpacing="-0.04" />
+            <div className="flex items-center gap-2">
+              <Brain className="h-6 w-6 text-blue-400" />
+              <span className="text-gray-200">MindflowOS</span>
+            </div>
             <div className="text-gray-400 text-sm">
               © 2024 MindflowOS. All rights reserved.
             </div>
@@ -65,7 +149,7 @@ const LandingPage = () => {
         </div>
       </footer>
 
-      <style>{`
+      <style jsx>{`
         @keyframes blob {
           0% { transform: translate(0px, 0px) scale(1); }
           33% { transform: translate(30px, -50px) scale(1.1); }
