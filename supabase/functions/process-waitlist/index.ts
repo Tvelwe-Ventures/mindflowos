@@ -33,7 +33,10 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error(dbError.message);
     }
 
+    console.log("Successfully added to waitlist table");
+
     // Send welcome email via Resend
+    console.log("Attempting to send email via Resend...");
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -124,6 +127,9 @@ const handler = async (req: Request): Promise<Response> => {
       console.error("Resend API error:", error);
       throw new Error("Failed to send email");
     }
+
+    const emailResponse = await res.json();
+    console.log("Email sent successfully:", emailResponse);
 
     return new Response(
       JSON.stringify({ message: "Successfully joined waitlist" }),
