@@ -4,7 +4,7 @@ import { DemoSection } from "@/components/DemoSection";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { SectionVisualizer } from "@/components/SectionVisualizer";
 import { EquityManagement } from "@/components/EquityManagement";
-import { PerformanceTracker } from "@/components/PerformanceTracker";
+import PerformanceTracker from "@/components/PerformanceTracker";
 
 const Index = () => {
   return (
