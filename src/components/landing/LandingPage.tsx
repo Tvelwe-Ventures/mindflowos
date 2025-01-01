@@ -135,10 +135,10 @@ const LandingPage = () => {
         <section className="py-20 relative overflow-hidden">
           <div className="max-w-6xl mx-auto px-4 text-center mb-16">
             <h2 className="text-4xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-6">
-              How do you Visualise your business strategy?
+              Transform Your Business Strategy
             </h2>
             <p className="text-xl text-gray-400">
-              Take a short quiz to know your strategy score.
+              Take a short quiz and get a chance to join the exclusive waitlist and be the first to experience the future.
             </p>
           </div>
           <div className="max-w-4xl mx-auto px-4">
