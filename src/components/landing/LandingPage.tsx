@@ -30,7 +30,7 @@ const LandingPage = () => {
               className="h-8 w-auto animate-float"
             />
             <span className="text-xl font-bold font-space-grotesk tracking-tight">
-              <span className="text-[#33C3F0]">Mind</span>
+              <span className="text-white">Mind</span>
               <span className="text-[#9b87f5]">flow</span>
               <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">OS</span>
             </span>
