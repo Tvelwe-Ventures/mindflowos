@@ -13,7 +13,7 @@ const DarkWaitlist = () => {
     {
       id: 'welcome',
       title: "Transform Your Business Strategy",
-      description: "Join the exclusive waitlist and be first to experience the future",
+      description: "Take a short quiz to join the exclusive waitlist and be first to experience the future",
       type: 'intro'
     },
     {
