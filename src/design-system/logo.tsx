@@ -26,18 +26,18 @@ export const Logo: React.FC<LogoProps> = ({
   const colors = {
     light: {
       text: 'text-gray-900',
-      accent: 'text-[#2563EB]'
+      accent: 'text-blue-600'
     },
     dark: {
       text: 'text-white',
-      accent: 'text-[#2563EB]'
+      accent: 'text-blue-400'
     }
   };
 
   return (
     <div className="flex items-center gap-2">
       <img 
-        src="/lovable-uploads/354294ba-c547-4789-ba94-b7c69f3c10d1.png" 
+        src="/lovable-uploads/5954d802-45d2-43b3-8cb0-218d6da1b02c.png" 
         alt="MindflowOS Logo" 
         className={`${iconSizes[size]} w-auto`}
       />
