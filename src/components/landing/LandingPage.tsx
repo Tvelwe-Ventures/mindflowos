@@ -29,8 +29,10 @@ const LandingPage = () => {
               alt="MindflowOS Logo" 
               className="h-8 w-auto animate-float"
             />
-            <span className="text-xl font-bold text-[#9b87f5] hover:text-[#8B5CF6] transition-colors font-space-grotesk tracking-tight">
-              MindflowOS
+            <span className="text-xl font-bold font-space-grotesk tracking-tight">
+              <span className="text-[#33C3F0]">Mind</span>
+              <span className="text-[#9b87f5]">flow</span>
+              <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">OS</span>
             </span>
           </div>
           <button className="px-4 py-2 bg-gradient-to-r from-[#8B5CF6] to-[#D946EF] text-white rounded-lg hover:shadow-lg hover:shadow-purple-500/20 transition-all text-sm animate-fade-up">
