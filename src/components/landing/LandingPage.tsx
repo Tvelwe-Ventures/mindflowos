@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Brain, Globe, Users } from 'lucide-react';
-import { WaitlistForm } from '@/components/WaitlistForm';
+import DarkWaitlist from '@/components/quiz/DarkWaitlist';
 import { IntegrationsSection } from './IntegrationsSection';
 import EnhancedAIFeatures from '@/components/features/EnhancedAIFeatures';
 
@@ -127,6 +127,21 @@ const LandingPage = () => {
                 </Card>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Quiz Section */}
+        <section className="py-20 relative overflow-hidden">
+          <div className="max-w-6xl mx-auto px-4 text-center mb-16">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-6">
+              How do you Visualise your business strategy?
+            </h2>
+            <p className="text-xl text-gray-400">
+              Take a short quiz to know your strategy score.
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto px-4">
+            <DarkWaitlist />
           </div>
         </section>
 
