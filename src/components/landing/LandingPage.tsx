@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Brain, Globe, Users } from 'lucide-react';
+import { Brain, Globe, Users, ArrowRight } from 'lucide-react';
 import { WaitlistForm } from '@/components/WaitlistForm';
 import { IntegrationsSection } from './IntegrationsSection';
+import { ProductFeatures } from './ProductFeatures';
 
 const LandingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,7 +17,7 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-950 via-[#1a0b2e] to-gray-950">
       {/* Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-gray-900/80 backdrop-blur-lg' : 'bg-transparent'
@@ -68,64 +69,8 @@ const LandingPage = () => {
           </div>
         </section>
 
-        {/* Feature Highlights */}
-        <section className="py-20 bg-gray-900/50 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7')] opacity-5 bg-cover bg-center" />
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 to-gray-900/95" />
-          
-          <div className="max-w-3xl mx-auto px-4 relative z-10">
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: Brain,
-                  title: "AI-Powered Strategy",
-                  description: "Transform planning from periodic exercises into continuous optimization",
-                  color: "#8B5CF6",
-                  delay: 0
-                },
-                {
-                  icon: Globe,
-                  title: "Dynamic Execution",
-                  description: "Adapt and evolve your strategy in real-time as market conditions change",
-                  color: "#D946EF",
-                  delay: 100
-                },
-                {
-                  icon: Users,
-                  title: "Team Alignment",
-                  description: "Keep your entire organization synchronized with your strategic vision",
-                  color: "#0EA5E9",
-                  delay: 200
-                }
-              ].map((feature, index) => (
-                <Card 
-                  key={index} 
-                  className="border-gray-800 bg-gray-900/50 backdrop-blur-xl hover:shadow-lg transition-all transform hover:scale-105 duration-300 animate-fade-up"
-                  style={{ 
-                    animationDelay: `${feature.delay}ms`,
-                    boxShadow: `0 4px 20px ${feature.color}10`
-                  }}
-                >
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="p-3 rounded-xl border transition-colors"
-                           style={{ 
-                             backgroundColor: `${feature.color}15`,
-                             borderColor: `${feature.color}30`
-                           }}>
-                        <feature.icon className="h-6 w-6" style={{ color: feature.color }} />
-                      </div>
-                      <h3 className="text-lg font-semibold text-gray-200">
-                        {feature.title}
-                      </h3>
-                    </div>
-                    <p className="text-gray-400">{feature.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Product Features */}
+        <ProductFeatures />
 
         {/* Integrations Section */}
         <IntegrationsSection />
