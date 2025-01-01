@@ -131,8 +131,8 @@ const LandingPage = () => {
           </div>
         </section>
 
-        {/* Quiz Section */}
-        <section className="py-20 relative overflow-hidden">
+        {/* Quiz Section - Adjusted spacing */}
+        <section className="py-12 relative overflow-hidden">
           <div className="max-w-4xl mx-auto px-4">
             <DarkWaitlist />
           </div>
