@@ -73,7 +73,7 @@ const LandingPage = () => {
         </section>
 
         {/* Feature Highlights */}
-        <section className="pb-8 bg-gray-900/50 relative overflow-hidden">
+        <section className="bg-gray-900/50 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7')] opacity-5 bg-cover bg-center" />
           <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 to-gray-900/95" />
           
@@ -131,8 +131,8 @@ const LandingPage = () => {
           </div>
         </section>
 
-        {/* Quiz Section - No vertical spacing */}
-        <section className="relative overflow-hidden">
+        {/* Quiz Section */}
+        <section className="-mt-8 relative overflow-hidden">
           <div className="max-w-4xl mx-auto px-4">
             <DarkWaitlist />
           </div>
