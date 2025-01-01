@@ -42,12 +42,14 @@ export const WaitlistForm = () => {
 
   if (isSubmitted) {
     return (
-      <Alert className="max-w-md mx-auto bg-green-500/10 border-green-500/20 text-green-500">
-        <Check className="h-5 w-5" />
-        <AlertDescription className="text-lg">
-          Great thanks! We're excited to have you join our waitlist. You'll receive an email shortly with more details about MindflowOS.
-        </AlertDescription>
-      </Alert>
+      <div className="fixed inset-0 flex items-center justify-center bg-gray-900/50 backdrop-blur-sm z-50 px-4">
+        <Alert className="max-w-md w-full bg-green-500/10 border-green-500/20 text-green-500">
+          <Check className="h-5 w-5" />
+          <AlertDescription className="text-lg">
+            Great thanks! We're excited to have you join our waitlist. You'll receive an email shortly with more details about MindflowOS.
+          </AlertDescription>
+        </Alert>
+      </div>
     );
   }
 
