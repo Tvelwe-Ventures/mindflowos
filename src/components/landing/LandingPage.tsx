@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Brain, Globe, Users } from 'lucide-react';
-import DarkWaitlist from '@/components/quiz/DarkWaitlist';
 import { IntegrationsSection } from './IntegrationsSection';
 import EnhancedAIFeatures from '@/components/features/EnhancedAIFeatures';
 import { WaitlistForm } from '@/components/WaitlistForm';
@@ -128,13 +127,6 @@ const LandingPage = () => {
                 </Card>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* Quiz Section */}
-        <section className="-mt-8 relative overflow-hidden">
-          <div className="max-w-4xl mx-auto px-4">
-            <DarkWaitlist />
           </div>
         </section>
 
