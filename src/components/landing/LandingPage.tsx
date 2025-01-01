@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Brain, Globe, Users } from 'lucide-react';
 import { WaitlistForm } from '@/components/WaitlistForm';
 import { IntegrationsSection } from './IntegrationsSection';
+import EnhancedAIFeatures from '@/components/features/EnhancedAIFeatures';
 
 const LandingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +29,7 @@ const LandingPage = () => {
               alt="MindflowOS Logo" 
               className="h-8 w-auto animate-float"
             />
-            <span className="text-xl font-bold text-[#9b87f5] hover:text-[#8B5CF6] transition-colors">
+            <span className="text-xl font-bold text-[#9b87f5] hover:text-[#8B5CF6] transition-colors font-space-grotesk tracking-tight">
               MindflowOS
             </span>
           </div>
@@ -126,6 +127,9 @@ const LandingPage = () => {
             </div>
           </div>
         </section>
+
+        {/* AI Features Section */}
+        <EnhancedAIFeatures />
 
         {/* Integrations Section */}
         <IntegrationsSection />
