@@ -15,9 +15,12 @@ export const WaitlistForm = () => {
     setIsLoading(true);
 
     try {
-      const { error } = await supabase.functions.invoke("process-waitlist", {
+      console.log('Submitting email to waitlist:', email);
+      const { data, error } = await supabase.functions.invoke("process-waitlist", {
         body: { email },
       });
+
+      console.log('Response from waitlist function:', { data, error });
 
       if (error) throw error;
 
@@ -32,7 +35,7 @@ export const WaitlistForm = () => {
       console.error("Error joining waitlist:", error);
       toast({
         title: "Error",
-        description: "Failed to join waitlist. Please try again.",
+        description: error.message || "Failed to join waitlist. Please try again.",
         variant: "destructive",
       });
     } finally {
