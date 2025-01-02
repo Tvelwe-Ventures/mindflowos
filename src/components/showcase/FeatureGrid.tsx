@@ -24,9 +24,13 @@ const FeatureGrid = () => {
   return (
     <div className="grid md:grid-cols-3 gap-6 mt-16">
       {features.map((feature, idx) => (
-        <Card key={idx} className="hover:shadow-lg transition-shadow">
+        <Card 
+          key={idx} 
+          className="hover:shadow-lg transition-all duration-300 transform hover:scale-105 animate-fade-up"
+          style={{ animationDelay: `${idx * 200}ms` }}
+        >
           <CardContent className="p-6">
-            <feature.icon className="h-8 w-8 text-blue-600 mb-4" />
+            <feature.icon className="h-8 w-8 text-blue-600 mb-4 animate-float" />
             <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
             <p className="text-gray-600">{feature.description}</p>
           </CardContent>
