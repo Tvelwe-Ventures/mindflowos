@@ -16,13 +16,11 @@ export const WaitlistForm = () => {
 
     try {
       console.log('Submitting email to waitlist:', email);
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('waitlist')
-        .insert([{ email }])
-        .select()
-        .single();
+        .insert([{ email }]);
 
-      console.log('Response from waitlist submission:', { data, error });
+      console.log('Response from waitlist submission:', { error });
 
       if (error) throw error;
 
