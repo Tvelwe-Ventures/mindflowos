@@ -4,6 +4,7 @@ import { Brain, Globe, Users } from 'lucide-react';
 import { IntegrationsSection } from './IntegrationsSection';
 import EnhancedAIFeatures from '@/components/features/EnhancedAIFeatures';
 import { WaitlistForm } from '@/components/WaitlistForm';
+import FeedbackForm from '@/components/FeedbackForm';
 
 const LandingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
