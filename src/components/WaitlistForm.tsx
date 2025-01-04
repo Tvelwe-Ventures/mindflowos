@@ -30,7 +30,8 @@ export const WaitlistForm = () => {
         title: "Success!",
         description: "You've been added to our waitlist. Check your email for confirmation!",
         variant: "default",
-        className: "bg-white border-green-500 text-gray-900",
+        duration: 5000,
+        className: "bg-green-50 border-green-200",
       });
 
       setIsSubmitted(true);
@@ -41,16 +42,17 @@ export const WaitlistForm = () => {
         title: "Error",
         description: error.message || "Failed to join waitlist. Please try again.",
         variant: "destructive",
-        className: "bg-red-50 border-red-200 text-red-900",
+        duration: 5000,
+        className: "bg-red-50 border-red-200",
       });
-      setIsLoading(false);
     }
+    setIsLoading(false);
   };
 
   if (isSubmitted) {
     return (
       <div className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50 px-4">
-        <Alert className="max-w-md w-full bg-white border-green-500 shadow-lg">
+        <Alert className="max-w-md w-full bg-white shadow-lg">
           <div className="flex items-center gap-3">
             <div className="flex-shrink-0">
               <Check className="h-6 w-6 text-green-500" />
