@@ -15,38 +15,50 @@ export const WaitlistForm = () => {
     setIsLoading(true);
 
     try {
-      console.log('Submitting email to waitlist:', email);
-      const { error } = await supabase
+      console.log('Starting waitlist submission for email:', email);
+      
+      const { data, error } = await supabase
         .from('waitlist')
-        .insert([{ email }]);
+        .insert([{ email }])
+        .select();
 
-      console.log('Response from waitlist submission:', { error });
+      console.log('Supabase response:', { data, error });
 
       if (error) {
+        console.error('Supabase error:', error);
         throw error;
       }
 
+      console.log('Successfully added to waitlist:', data);
+      
+      setIsSubmitted(true);
+      setEmail("");
+      
       toast({
         title: "Success!",
         description: "You've been added to our waitlist. Check your email for confirmation!",
         variant: "default",
         duration: 5000,
-        className: "bg-green-50 border-green-200",
+        className: "bg-green-50 border-green-200 text-green-900",
       });
-
-      setIsSubmitted(true);
-      setEmail("");
     } catch (error: any) {
       console.error("Error joining waitlist:", error);
+      
+      let errorMessage = "Failed to join waitlist. Please try again.";
+      if (error.message?.includes('duplicate')) {
+        errorMessage = "This email is already on the waitlist.";
+      }
+      
       toast({
         title: "Error",
-        description: error.message || "Failed to join waitlist. Please try again.",
+        description: errorMessage,
         variant: "destructive",
         duration: 5000,
-        className: "bg-red-50 border-red-200",
+        className: "bg-red-50 border-red-200 text-red-900",
       });
+    } finally {
+      setIsLoading(false);
     }
-    setIsLoading(false);
   };
 
   if (isSubmitted) {
