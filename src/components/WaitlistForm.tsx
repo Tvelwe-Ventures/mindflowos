@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { Check } from "lucide-react";
+import { Check, AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 export const WaitlistForm = () => {
@@ -22,11 +22,15 @@ export const WaitlistForm = () => {
 
       console.log('Response from waitlist submission:', { error });
 
-      if (error) throw error;
+      if (error) {
+        throw error;
+      }
 
       toast({
         title: "Success!",
         description: "You've been added to our waitlist. Check your email for confirmation!",
+        variant: "default",
+        duration: 5000,
       });
 
       setIsSubmitted(true);
@@ -37,6 +41,7 @@ export const WaitlistForm = () => {
         title: "Error",
         description: error.message || "Failed to join waitlist. Please try again.",
         variant: "destructive",
+        duration: 5000,
       });
     } finally {
       setIsLoading(false);
