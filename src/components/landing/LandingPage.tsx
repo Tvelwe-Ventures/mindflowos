@@ -5,6 +5,7 @@ import { IntegrationsSection } from './IntegrationsSection';
 import EnhancedAIFeatures from '@/components/features/EnhancedAIFeatures';
 import { WaitlistForm } from '@/components/WaitlistForm';
 import { FloatingFeedbackButton } from '@/components/feedback/FloatingFeedbackButton';
+import FeedbackForm from '@/components/FeedbackForm';
 
 const LandingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
