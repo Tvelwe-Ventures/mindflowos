@@ -136,10 +136,25 @@ const LandingPage = () => {
         {/* Integrations Section */}
         <IntegrationsSection />
 
+        {/* Feedback Section */}
+        <section className="py-20 relative">
+          <div className="max-w-3xl mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Share Your Feedback
+              </h2>
+              <p className="text-gray-400">
+                Help us improve MindflowOS by sharing your thoughts and suggestions
+              </p>
+            </div>
+            <FeedbackForm />
+          </div>
+        </section>
+
         {/* Footer */}
         <footer className="mt-auto py-8 border-t border-gray-800">
           <div className="max-w-3xl mx-auto px-4">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col items-center justify-between space-y-4">
               <div className="flex items-center gap-2">
                 <img 
                   src="/lovable-uploads/1932d00e-ca29-46e7-bf2f-59ae839a236a.png" 
@@ -150,6 +165,9 @@ const LandingPage = () => {
                   MindflowOS
                 </span>
               </div>
+              <a href="https://app.netlify.com/sites/mindflowos/deploys" target="_blank" rel="noopener noreferrer">
+                <img src="https://api.netlify.com/api/v1/badges/64731aab-7a37-4b5c-b566-d947cd110276/deploy-status" alt="Netlify Status" />
+              </a>
               <div className="text-gray-400 text-sm">
                 © 2024 MindflowOS. All rights reserved.
               </div>
