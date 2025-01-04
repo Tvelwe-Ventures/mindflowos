@@ -4,7 +4,7 @@ import { Brain, Globe, Users } from 'lucide-react';
 import { IntegrationsSection } from './IntegrationsSection';
 import EnhancedAIFeatures from '@/components/features/EnhancedAIFeatures';
 import { WaitlistForm } from '@/components/WaitlistForm';
-import FeedbackForm from '@/components/FeedbackForm';
+import { FloatingFeedbackButton } from '@/components/feedback/FloatingFeedbackButton';
 
 const LandingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,7 +19,6 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950">
-      {/* Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-gray-900/80 backdrop-blur-lg' : 'bg-transparent'
       }`}>
@@ -41,7 +40,7 @@ const LandingPage = () => {
           </button>
         </div>
       </nav>
-
+      
       {/* Main Content Container */}
       <div className="flex-grow flex flex-col">
         {/* Hero Section */}
@@ -176,6 +175,9 @@ const LandingPage = () => {
           </div>
         </footer>
       </div>
+
+      {/* Add the FloatingFeedbackButton */}
+      <FloatingFeedbackButton />
     </div>
   );
 };

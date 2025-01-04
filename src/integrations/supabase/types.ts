@@ -11,28 +11,85 @@ export type Database = {
     Tables: {
       feedback: {
         Row: {
+          admin_response: string | null
+          admin_response_at: string | null
+          category: string[] | null
           created_at: string
           feedback_type: string
           id: string
           message: string
+          resolved_at: string | null
           specific_area: string | null
+          status: string | null
+          tags: string[] | null
           user_email: string
         }
         Insert: {
+          admin_response?: string | null
+          admin_response_at?: string | null
+          category?: string[] | null
           created_at?: string
           feedback_type: string
           id?: string
           message: string
+          resolved_at?: string | null
           specific_area?: string | null
+          status?: string | null
+          tags?: string[] | null
           user_email: string
         }
         Update: {
+          admin_response?: string | null
+          admin_response_at?: string | null
+          category?: string[] | null
           created_at?: string
           feedback_type?: string
           id?: string
           message?: string
+          resolved_at?: string | null
           specific_area?: string | null
+          status?: string | null
+          tags?: string[] | null
           user_email?: string
+        }
+        Relationships: []
+      }
+      feedback_categories: {
+        Row: {
+          created_at: string
+          description: string | null
+          id: string
+          name: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          id?: string
+          name: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          id?: string
+          name?: string
+        }
+        Relationships: []
+      }
+      feedback_tags: {
+        Row: {
+          created_at: string
+          id: string
+          name: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          name: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          name?: string
         }
         Relationships: []
       }
