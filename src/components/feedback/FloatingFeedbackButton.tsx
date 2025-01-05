@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { MessageSquare } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import FeedbackForm from '../FeedbackForm';
+import { FeedbackForm } from './FeedbackForm';
 
-export const FloatingFeedbackButton = () => {
+interface FloatingFeedbackButtonProps {
+  supabaseUrl?: string;
+  supabaseAnonKey?: string;
+}
+
+export const FloatingFeedbackButton = ({ supabaseUrl, supabaseAnonKey }: FloatingFeedbackButtonProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -21,7 +26,11 @@ export const FloatingFeedbackButton = () => {
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold">Share Your Feedback</DialogTitle>
           </DialogHeader>
-          <FeedbackForm onSubmitSuccess={() => setIsOpen(false)} />
+          <FeedbackForm 
+            onSubmitSuccess={() => setIsOpen(false)}
+            supabaseUrl={supabaseUrl}
+            supabaseAnonKey={supabaseAnonKey}
+          />
         </DialogContent>
       </Dialog>
     </>
