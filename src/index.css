@@ -16,11 +16,11 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-github-dark text-white antialiased;
   }
 
   ::selection {
-    @apply bg-accent/20;
+    @apply bg-github-accent/20;
   }
 }
 

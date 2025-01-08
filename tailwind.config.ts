@@ -19,6 +19,18 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        // GitHub-inspired colors
+        github: {
+          dark: "#0d1117",
+          darker: "#010409",
+          default: "#1a1f2c",
+          light: "#ffffff",
+          accent: "#2188ff",
+          success: "#2ea44f",
+          muted: "#8b949e",
+          subtle: "#161b22",
+          border: "#30363d"
+        },
         primary: {
           DEFAULT: "#1a1a1a",
           foreground: "#ffffff",
@@ -28,7 +40,7 @@ export default {
           foreground: "#1a1a1a",
         },
         accent: {
-          DEFAULT: "#007AFF",
+          DEFAULT: "#2188ff",
           foreground: "#ffffff",
         },
         muted: {
