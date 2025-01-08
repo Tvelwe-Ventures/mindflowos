@@ -22,7 +22,10 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <span className="font-butler font-semibold text-xl tracking-tighter uppercase">
+            <span 
+              className="font-butler font-semibold text-xl uppercase"
+              style={{ letterSpacing: '-0.04em' }}
+            >
               mapp<span className="text-blue-600">en</span>
             </span>
           </div>
