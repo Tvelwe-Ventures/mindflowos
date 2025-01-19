@@ -88,7 +88,7 @@ const LogoVariants = () => {
       </div>
 
       {/* Logo Images */}
-      <div className="mt-12 grid md:grid-cols-2 gap-8">
+      <div className="mt-12 grid md:grid-cols-3 gap-8">
         <Card className="bg-github-dark border-github-border">
           <CardHeader>
             <CardTitle className="text-white">Original Logo</CardTitle>
@@ -109,6 +109,18 @@ const LogoVariants = () => {
             <img 
               src="/lovable-uploads/245db2ab-12e2-4271-aabc-9405bbe797fa.png"
               alt="Gradient Shape Mappen Logo"
+              className="h-16"
+            />
+          </CardContent>
+        </Card>
+        <Card className="bg-github-dark border-github-border">
+          <CardHeader>
+            <CardTitle className="text-white">New Solid Purple Logo</CardTitle>
+          </CardHeader>
+          <CardContent className="flex items-center justify-center h-48">
+            <img 
+              src="/lovable-uploads/de1f185a-ffc5-43ec-9b47-07e182ea0a82.png"
+              alt="New Solid Purple Mappen Logo"
               className="h-16"
             />
           </CardContent>
