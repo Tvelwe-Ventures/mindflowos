@@ -23,29 +23,21 @@ export const Logo: React.FC<LogoProps> = ({
     lg: 'h-10'
   };
 
-  const colors = {
-    light: {
-      text: 'text-gray-900',
-      accent: 'text-blue-600'
-    },
-    dark: {
-      text: 'text-white',
-      accent: 'text-blue-400'
-    }
-  };
-
   return (
     <div className="flex items-center gap-2">
       <img 
-        src="/lovable-uploads/5954d802-45d2-43b3-8cb0-218d6da1b02c.png" 
-        alt="MindflowOS Logo" 
+        src="/lovable-uploads/de1f185a-ffc5-43ec-9b47-07e182ea0a82.png" 
+        alt="Mappen Logo" 
         className={`${iconSizes[size]} w-auto`}
       />
       <span 
-        className={`${sizes[size]} font-semibold ${colors[variant].text} font-space-grotesk`}
-        style={{ letterSpacing: `${letterSpacing}em` }}
+        className={`${sizes[size]} font-semibold font-space-grotesk`}
+        style={{ 
+          letterSpacing: `${letterSpacing}em`,
+          color: '#6E59A5'
+        }}
       >
-        Mind<span className={colors[variant].accent}>flow</span>OS
+        Mappen
       </span>
     </div>
   );

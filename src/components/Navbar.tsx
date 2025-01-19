@@ -24,9 +24,12 @@ export const Navbar = () => {
           <div className="flex items-center">
             <span 
               className="font-butler font-semibold text-xl uppercase"
-              style={{ letterSpacing: '-0.04em' }}
+              style={{ 
+                letterSpacing: '-0.04em',
+                color: '#6E59A5'  // New solid purple color
+              }}
             >
-              mapp<span className="text-blue-600">en</span>
+              mappen
             </span>
           </div>
 
@@ -36,7 +39,7 @@ export const Navbar = () => {
             <button className="text-gray-600 hover:text-gray-900">Pricing</button>
             <button 
               onClick={() => setShowAuthModal(true)}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="px-4 py-2 bg-[#6E59A5] text-white rounded-lg hover:bg-[#5D4B8C] transition-colors"
             >
               Get Started
             </button>

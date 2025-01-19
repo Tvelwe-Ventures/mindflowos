@@ -26,17 +26,18 @@ const LandingPage = () => {
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img 
-              src="/lovable-uploads/1932d00e-ca29-46e7-bf2f-59ae839a236a.png" 
-              alt="MindflowOS Logo" 
+              src="/lovable-uploads/de1f185a-ffc5-43ec-9b47-07e182ea0a82.png" 
+              alt="Mappen Logo" 
               className="h-8 w-auto animate-float"
             />
-            <span className="text-xl font-bold font-space-grotesk tracking-tight">
-              <span className="text-white">Mind</span>
-              <span className="text-[#9b87f5]">flow</span>
-              <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">OS</span>
+            <span 
+              className="text-xl font-bold font-space-grotesk tracking-tight"
+              style={{ color: '#6E59A5' }}
+            >
+              Mappen
             </span>
           </div>
-          <button className="px-4 py-2 bg-gradient-to-r from-[#8B5CF6] to-[#D946EF] text-white rounded-lg hover:shadow-lg hover:shadow-purple-500/20 transition-all text-sm animate-fade-up">
+          <button className="px-4 py-2 bg-[#6E59A5] hover:bg-[#5D4B8C] text-white rounded-lg transition-all text-sm animate-fade-up">
             Join Waitlist
           </button>
         </div>
@@ -158,19 +159,19 @@ const LandingPage = () => {
             <div className="flex flex-col items-center justify-between space-y-4">
               <div className="flex items-center gap-2">
                 <img 
-                  src="/lovable-uploads/1932d00e-ca29-46e7-bf2f-59ae839a236a.png" 
-                  alt="MindflowOS Logo" 
+                  src="/lovable-uploads/de1f185a-ffc5-43ec-9b47-07e182ea0a82.png" 
+                  alt="Mappen Logo" 
                   className="h-6 w-auto" 
                 />
-                <span className="text-[#9b87f5] hover:text-[#8B5CF6] transition-colors">
-                  MindflowOS
+                <span style={{ color: '#6E59A5' }} className="hover:text-[#5D4B8C] transition-colors">
+                  Mappen
                 </span>
               </div>
               <a href="https://app.netlify.com/sites/mindflowos/deploys" target="_blank" rel="noopener noreferrer">
                 <img src="https://api.netlify.com/api/v1/badges/64731aab-7a37-4b5c-b566-d947cd110276/deploy-status" alt="Netlify Status" />
               </a>
               <div className="text-gray-400 text-sm">
-                © 2024 MindflowOS. All rights reserved.
+                © 2024 Mappen. All rights reserved.
               </div>
             </div>
           </div>
