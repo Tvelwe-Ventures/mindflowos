@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Brain, Globe, Users } from 'lucide-react';
+import { Hero } from '@/components/hero/Hero';
 import { IntegrationsSection } from './IntegrationsSection';
 import EnhancedAIFeatures from '@/components/features/EnhancedAIFeatures';
 import { WaitlistForm } from '@/components/WaitlistForm';
@@ -46,32 +45,7 @@ const LandingPage = () => {
       {/* Main Content Container */}
       <div className="flex-grow flex flex-col">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 relative overflow-hidden">
-          <div className="absolute top-20 left-1/4 w-96 h-96 bg-[#8B5CF6] rounded-full mix-blend-overlay filter blur-3xl opacity-20 animate-blob" />
-          <div className="absolute top-20 right-1/4 w-96 h-96 bg-[#D946EF] rounded-full mix-blend-overlay filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
-          <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-[#6E59A5] rounded-full mix-blend-overlay filter blur-3xl opacity-10 animate-blob animation-delay-4000" />
-          
-          <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
-            <div className="space-y-6">
-              <h1 
-                className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#9b87f5] via-[#D946EF] to-[#8B5CF6] bg-clip-text text-transparent animate-fade-up"
-                style={{ letterSpacing: '-0.04em' }}
-              >
-                Transform Your Business Strategy
-                <span className="block mt-2 bg-gradient-to-r from-[#8B5CF6] to-[#D946EF] bg-clip-text text-transparent">
-                  Into a Living System
-                </span>
-              </h1>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: '200ms' }}>
-                Join innovative companies using MindflowOS to transform static business 
-                plans into dynamic, AI-powered operating systems.
-              </p>
-              <div className="animate-fade-up" style={{ animationDelay: '400ms' }}>
-                <WaitlistForm />
-              </div>
-            </div>
-          </div>
-        </section>
+        <Hero />
 
         {/* Feature Highlights */}
         <section className="bg-gray-900/50 relative overflow-hidden">
@@ -178,7 +152,6 @@ const LandingPage = () => {
         </footer>
       </div>
 
-      {/* Add the FloatingFeedbackButton */}
       <FloatingFeedbackButton />
     </div>
   );
