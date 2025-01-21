@@ -1,14 +1,14 @@
 import React from 'react';
-import HeroSection from './HeroSection';
-import EnhancedAIFeatures from '@/components/features/EnhancedAIFeatures';
-import { FloatingFeedbackButton } from '@/components/feedback/FloatingFeedbackButton';
+import { Hero } from './Hero';
+import { WaitlistForm } from '@/components/WaitlistForm';
 
-const LandingPage = () => {
+export const LandingPage = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950">
-      <HeroSection />
-      <EnhancedAIFeatures />
-      <FloatingFeedbackButton />
+    <div className="container mx-auto px-4 py-12">
+      <Hero />
+      <div className="mt-12">
+        <WaitlistForm />
+      </div>
     </div>
   );
 };
