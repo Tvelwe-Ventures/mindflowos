@@ -1,12 +1,14 @@
 import React from 'react';
 import { Navbar } from '@/components/Navbar';
-import HeroSection from '@/components/landing/HeroSection';
+import LandingPage from '@/components/landing/LandingPage';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-github-dark">
       <Navbar />
-      <HeroSection />
+      <main>
+        <LandingPage />
+      </main>
     </div>
   );
 };
