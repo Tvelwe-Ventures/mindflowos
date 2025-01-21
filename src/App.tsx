@@ -1,16 +1,13 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
-import { AuthProvider } from "@/contexts/AuthContext";
-import { routes } from "@/routes";
-
-const router = createBrowserRouter(routes);
+import Index from "@/pages/Index";
 
 function App() {
   return (
-    <AuthProvider>
-      <RouterProvider router={router} />
+    <Router>
+      <Index />
       <Toaster />
-    </AuthProvider>
+    </Router>
   );
 }
 
