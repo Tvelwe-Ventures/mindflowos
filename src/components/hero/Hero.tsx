@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { SparklesText } from '@/components/ui/sparkles-text';
-import { WaitlistForm } from './WaitlistForm';
+import { WaitlistForm } from '@/components/WaitlistForm';
 
 export const Hero = () => {
   const { scrollYProgress } = useScroll();
