@@ -22,32 +22,25 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        github: {
-          dark: "#0d1117",
-          darker: "#010409",
-          default: "#1a1f2c",
-          light: "#ffffff",
-          accent: "#2188ff",
-          success: "#2ea44f",
-          muted: "#8b949e",
-          subtle: "#161b22",
-          border: "#30363d"
-        },
         primary: {
-          DEFAULT: "#1a1a1a",
-          foreground: "#ffffff",
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "#f5f5f5",
-          foreground: "#1a1a1a",
-        },
-        accent: {
-          DEFAULT: "#2188ff",
-          foreground: "#ffffff",
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
         muted: {
-          DEFAULT: "#f5f5f5",
-          foreground: "#6b7280",
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
         },
       },
       keyframes: {
