@@ -1,36 +1,141 @@
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring, MotionValue } from 'framer-motion';
 import { SparklesText } from '@/components/ui/sparkles-text';
 import { WaitlistForm } from '@/components/WaitlistForm';
+import { products } from './products';
+
+interface ProductCardProps {
+  product: {
+    title: string;
+    link: string;
+    thumbnail: string;
+  };
+  translate: MotionValue<number>;
+}
+
+const ProductCard: React.FC<ProductCardProps> = ({ product, translate }) => {
+  return (
+    <motion.div
+      style={{
+        x: translate,
+      }}
+      whileHover={{
+        y: -20,
+      }}
+      key={product.title}
+      className="group/product h-96 w-[30rem] relative flex-shrink-0"
+    >
+      <a
+        href={product.link}
+        className="block group-hover/product:shadow-2xl"
+      >
+        <img
+          src={product.thumbnail}
+          className="object-cover object-left-top absolute h-full w-full inset-0"
+          alt={product.title}
+        />
+      </a>
+      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none" />
+      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
+        {product.title}
+      </h2>
+    </motion.div>
+  );
+};
 
 export const Hero = () => {
-  const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], [0, 300]);
+  const ref = React.useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
+
+  const translateX = useSpring(
+    useTransform(scrollYProgress, [0, 1], [0, 1000]),
+    springConfig
+  );
+  const translateXReverse = useSpring(
+    useTransform(scrollYProgress, [0, 1], [0, -1000]),
+    springConfig
+  );
+  const rotateX = useSpring(
+    useTransform(scrollYProgress, [0, 0.2], [15, 0]),
+    springConfig
+  );
+  const opacity = useSpring(
+    useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
+    springConfig
+  );
+  const rotateZ = useSpring(
+    useTransform(scrollYProgress, [0, 0.2], [20, 0]),
+    springConfig
+  );
+  const translateY = useSpring(
+    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
+    springConfig
+  );
+
+  const firstRow = products.slice(0, 2);
+  const secondRow = products.slice(2, 4);
+  const thirdRow = products.slice(4);
 
   return (
-    <div className="relative overflow-hidden min-h-screen flex items-center justify-center">
-      <motion.div 
-        className="absolute inset-0 z-0"
-        style={{ y }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 via-transparent to-transparent opacity-30" />
-        <div className="absolute inset-0 bg-[url('/lovable-uploads/57b181b3-d8a0-49b7-b7be-89e917d3918b.png')] bg-cover bg-center opacity-5" />
-      </motion.div>
-
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+    <div
+      ref={ref}
+      className="min-h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+    >
+      <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
         <SparklesText
           text="Turn Your Vision into Reality"
           colors={{ first: "#9E7AFF", second: "#6E59A5" }}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600"
+          className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600"
         />
-        
-        <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-          Turn your static business plan into an interactive mind map and dynamic operating system. 
-          Visualize, adapt, and execute your strategy in real-time.
+        <p className="max-w-2xl text-base md:text-xl mt-8 text-gray-400">
+          Transform static business plans and resumes into dynamic, interactive mind maps. 
+          Turn ideas into actionable strategies with real-time insights and intelligent visualisations.
         </p>
-        
         <WaitlistForm />
       </div>
+
+      <motion.div
+        style={{
+          rotateX,
+          rotateZ,
+          translateY,
+          opacity,
+        }}
+        className="mt-20"
+      >
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
+          {firstRow.map((product) => (
+            <ProductCard
+              key={product.title}
+              product={product}
+              translate={translateX}
+            />
+          ))}
+        </motion.div>
+        <motion.div className="flex flex-row mb-20 space-x-20">
+          {secondRow.map((product) => (
+            <ProductCard
+              key={product.title}
+              product={product}
+              translate={translateXReverse}
+            />
+          ))}
+        </motion.div>
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
+          {thirdRow.map((product) => (
+            <ProductCard
+              key={product.title}
+              product={product}
+              translate={translateX}
+            />
+          ))}
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
