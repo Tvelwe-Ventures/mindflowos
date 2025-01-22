@@ -65,6 +65,16 @@ export default {
           "33%": { transform: "translate(30px, -50px) scale(1.1)" },
           "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
           "100%": { transform: "translate(0px, 0px) scale(1)" },
+        },
+        "border-glow": {
+          "0%, 100%": {
+            "border-color": "rgba(147, 51, 234, 0.5)",
+            "box-shadow": "0 0 20px rgba(147, 51, 234, 0.3)"
+          },
+          "50%": {
+            "border-color": "rgba(79, 70, 229, 0.5)",
+            "box-shadow": "0 0 30px rgba(79, 70, 229, 0.4)"
+          }
         }
       },
       animation: {
@@ -73,6 +83,7 @@ export default {
         float: "float 6s ease-in-out infinite",
         "fade-up": "fade-up 0.5s ease-out forwards",
         blob: "blob 7s infinite",
+        "border-glow": "border-glow 3s ease-in-out infinite"
       },
     },
   },

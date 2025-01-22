@@ -42,12 +42,9 @@ const LandingPage = () => {
         </div>
       </nav>
       
-      {/* Main Content Container */}
       <div className="flex-grow flex flex-col">
-        {/* Hero Section */}
         <Hero />
 
-        {/* Feature Highlights */}
         <section className="bg-gray-900/50 dark:bg-gray-900/50 light:bg-gray-50/50 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7')] opacity-5 bg-cover bg-center" />
           <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 to-gray-900/95 dark:from-gray-900/80 dark:to-gray-900/95 light:from-white/80 light:to-white/95" />
@@ -79,10 +76,9 @@ const LandingPage = () => {
               ].map((feature, index) => (
                 <Card 
                   key={index} 
-                  className="border-gray-800 bg-gray-900/50 backdrop-blur-xl hover:shadow-lg transition-all transform hover:scale-105 duration-300 animate-fade-up dark:border-gray-800 dark:bg-gray-900/50 light:border-gray-200 light:bg-white/50"
+                  className="card-gradient animated-border backdrop-blur-xl hover:shadow-lg transition-all transform hover:scale-105 duration-300 animate-fade-up dark:border-gray-800 dark:bg-gray-900/50 light:border-gray-200 light:bg-white/50"
                   style={{ 
                     animationDelay: `${feature.delay}ms`,
-                    boxShadow: `0 4px 20px ${feature.color}10`
                   }}
                 >
                   <CardContent className="p-6">
@@ -98,7 +94,9 @@ const LandingPage = () => {
                         {feature.title}
                       </h3>
                     </div>
-                    <p className="text-gray-400 dark:text-gray-400 light:text-gray-600">{feature.description}</p>
+                    <p className="text-gray-400 dark:text-gray-400 light:text-gray-600">
+                      {feature.description}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
@@ -106,13 +104,9 @@ const LandingPage = () => {
           </div>
         </section>
 
-        {/* AI Features Section */}
         <EnhancedAIFeatures />
-
-        {/* Integrations Section */}
         <IntegrationsSection />
 
-        {/* Footer */}
         <footer className="mt-auto py-8 border-t border-gray-800 dark:border-gray-800 light:border-gray-200">
           <div className="max-w-3xl mx-auto px-4">
             <div className="flex flex-col items-center justify-between space-y-4">
