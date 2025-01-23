@@ -24,17 +24,12 @@ const LandingPage = () => {
         isScrolled ? 'bg-gray-900/80 backdrop-blur-lg dark:bg-gray-900/80 light:bg-white/80' : 'bg-transparent'
       }`}>
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center">
             <img 
               src="/lovable-uploads/de1f185a-ffc5-43ec-9b47-07e182ea0a82.png" 
               alt="Mappen Logo" 
-              className="h-8 w-auto animate-float"
+              className="h-6 w-auto animate-float"
             />
-            <span 
-              className="text-xl font-bold font-space-grotesk tracking-tight text-gray-200 dark:text-gray-200 light:text-gray-900"
-            >
-              Mappen
-            </span>
           </div>
           <button className="px-4 py-2 bg-[#6E59A5] hover:bg-[#5D4B8C] text-white rounded-lg transition-all text-sm animate-fade-up">
             Join Waitlist
