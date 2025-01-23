@@ -88,7 +88,7 @@ export const Hero = () => {
     >
       <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
         <SparklesText
-          text="Turn Your Vision into Reality"
+          text="Make it Mappen"
           colors={{ first: "#9E7AFF", second: "#6E59A5" }}
           className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600"
         />

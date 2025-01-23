@@ -28,7 +28,7 @@ export const Navbar = () => {
               <img 
                 src="/lovable-uploads/57b181b3-d8a0-49b7-b7be-89e917d3918b.png" 
                 alt="Mappen Logo" 
-                className="h-8 w-auto"
+                className="h-6 w-auto" // Reduced from h-8 to h-6
               />
             </div>
 
