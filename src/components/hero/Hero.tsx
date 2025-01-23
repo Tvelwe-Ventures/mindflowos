@@ -31,11 +31,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, translate }) => {
       >
         <img
           src={product.thumbnail}
-          className="object-cover object-left-top absolute h-full w-full inset-0"
+          className="object-cover object-left-top absolute h-full w-full inset-0 rounded-lg"
           alt={product.title}
         />
       </a>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none" />
+      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none rounded-lg" />
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
         {product.title}
       </h2>
