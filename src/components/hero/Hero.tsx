@@ -24,7 +24,11 @@ export const Hero = () => {
   return (
     <ContainerScroll titleComponent={titleComponent}>
       <div className="w-full h-full flex items-center justify-center">
-        {/* The image is now handled by the Card component */}
+        <img 
+          src="/lovable-uploads/26b7f27d-99ea-46bc-9da3-318e91c334f2.png" 
+          alt="Mappen Interface"
+          className="w-full h-full object-cover rounded-xl"
+        />
       </div>
     </ContainerScroll>
   );
