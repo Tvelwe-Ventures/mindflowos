@@ -53,8 +53,8 @@ export default {
           to: { height: "0" },
         },
         float: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(-20px)" },
         },
         "fade-up": {
           "0%": { opacity: "0", transform: "translateY(20px)" },
@@ -80,7 +80,7 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        float: "float 6s ease-in-out infinite",
+        float: "float 4s ease-in-out infinite",
         "fade-up": "fade-up 0.5s ease-out forwards",
         blob: "blob 7s infinite",
         "border-glow": "border-glow 3s ease-in-out infinite"
