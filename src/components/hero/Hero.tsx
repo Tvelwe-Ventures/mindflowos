@@ -25,9 +25,9 @@ export const Hero = () => {
     <ContainerScroll titleComponent={titleComponent}>
       <div className="w-full h-full flex items-center justify-center">
         <img 
-          src="/lovable-uploads/26b7f27d-99ea-46bc-9da3-318e91c334f2.png" 
-          alt="Mappen Interface"
-          className="w-full h-full object-cover rounded-xl"
+          src="/lovable-uploads/db1bd259-fc6d-419a-a36c-f3548fcb1470.png" 
+          alt="Mappen Mind Map Visualization"
+          className="w-full h-full object-contain rounded-xl"
         />
       </div>
     </ContainerScroll>
