@@ -27,7 +27,7 @@ export const Hero = () => {
         <img 
           src="/lovable-uploads/db1bd259-fc6d-419a-a36c-f3548fcb1470.png" 
           alt="Mappen Mind Map Visualization"
-          className="w-full h-full object-contain rounded-xl"
+          className="w-full h-full object-contain rounded-xl animate-float transition-all duration-300 ease-in-out"
         />
       </div>
     </ContainerScroll>
