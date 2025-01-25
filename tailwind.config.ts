@@ -80,7 +80,7 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        float: "float 8s ease-in-out infinite",
+        float: "float 12s ease-in-out infinite",
         "fade-up": "fade-up 0.5s ease-out forwards",
         blob: "blob 7s infinite",
         "border-glow": "border-glow 3s ease-in-out infinite"
