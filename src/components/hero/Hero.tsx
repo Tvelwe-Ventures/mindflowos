@@ -8,10 +8,10 @@ export const Hero = () => {
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full">
       <SparklesText
         text="Make it Mappen"
-        colors={{ first: "#9E7AFF", second: "#6E59A5" }}
-        className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600"
+        colors={{ first: "#FFFFFF", second: "#9E7AFF" }}
+        className="text-5xl md:text-7xl font-bold mb-6 text-white"
       />
-      <p className="max-w-2xl text-base md:text-xl mt-8 text-gray-400 mx-auto">
+      <p className="max-w-2xl text-base md:text-xl mt-8 text-gray-200 mx-auto">
         Transform static business plans and resumes into dynamic, interactive mind maps. 
         Turn ideas into actionable strategies with real-time insights and intelligent visualisations.
       </p>
