@@ -65,7 +65,7 @@ const LandingPage = () => {
               </h1>
             }
           >
-            <div className="h-[600px] w-full bg-[#1D1C20] rounded-lg p-6 flex items-center justify-center">
+            <div className="h-[400px] w-[80%] max-w-[600px] mx-auto bg-[#1D1C20] rounded-lg p-6 flex items-center justify-center">
               <div className="text-white text-xl">
                 Interactive Business Planning
               </div>
