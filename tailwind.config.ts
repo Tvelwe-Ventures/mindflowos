@@ -80,16 +80,24 @@ export default {
         },
         "device-border": {
           "0%": { 
-            "border-color": "rgba(255, 255, 255, 0.2)",
-            "box-shadow": "0 0 10px rgba(255, 255, 255, 0.1)"
+            "border-image": "linear-gradient(to right, #8B5CF6, #D946EF) 1",
+            "box-shadow": "0 0 20px rgba(139, 92, 246, 0.3)"
+          },
+          "25%": {
+            "border-image": "linear-gradient(to bottom, #D946EF, #0EA5E9) 1",
+            "box-shadow": "0 0 20px rgba(217, 70, 239, 0.3)"
           },
           "50%": {
-            "border-color": "rgba(255, 255, 255, 0.4)",
-            "box-shadow": "0 0 20px rgba(255, 255, 255, 0.2)"
+            "border-image": "linear-gradient(to left, #0EA5E9, #8B5CF6) 1",
+            "box-shadow": "0 0 20px rgba(14, 165, 233, 0.3)"
+          },
+          "75%": {
+            "border-image": "linear-gradient(to top, #8B5CF6, #D946EF) 1",
+            "box-shadow": "0 0 20px rgba(139, 92, 246, 0.3)"
           },
           "100%": {
-            "border-color": "rgba(255, 255, 255, 0.2)",
-            "box-shadow": "0 0 10px rgba(255, 255, 255, 0.1)"
+            "border-image": "linear-gradient(to right, #8B5CF6, #D946EF) 1",
+            "box-shadow": "0 0 20px rgba(139, 92, 246, 0.3)"
           }
         }
       },
@@ -100,7 +108,7 @@ export default {
         "fade-up": "fade-up 0.5s ease-out forwards",
         blob: "blob 7s infinite",
         "border-glow": "border-glow 3s ease-in-out infinite",
-        "device-border": "device-border 4s ease-in-out infinite"
+        "device-border": "device-border 8s linear infinite"
       },
     },
   },
