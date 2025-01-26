@@ -65,12 +65,10 @@ const LandingPage = () => {
               </h1>
             }
           >
-            <div className="h-full w-full bg-[#1D1C20] rounded-lg p-6">
-              <img
-                src="/lovable-uploads/de1f185a-ffc5-43ec-9b47-07e182ea0a82.png"
-                alt="Mappen Dashboard"
-                className="w-full h-full object-cover rounded-lg"
-              />
+            <div className="h-[600px] w-full bg-[#1D1C20] rounded-lg p-6 flex items-center justify-center">
+              <div className="text-white text-xl">
+                Interactive Business Planning
+              </div>
             </div>
           </ContainerScroll>
 
