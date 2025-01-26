@@ -58,38 +58,42 @@ const LandingPage = () => {
         <div className="min-h-screen flex flex-col">
           <Hero />
 
-          <ContainerScroll
-            titleComponent={
-              <h1 className="text-4xl font-semibold text-center mb-10 text-white">
-                Unleash the power of <br />
-                <span className="text-6xl font-bold">Scroll Animations</span>
-              </h1>
-            }
-          >
-            <div className="h-[400px] w-[80%] max-w-[600px] mx-auto bg-[#1D1C20] rounded-2xl p-6 overflow-hidden shadow-2xl border border-gray-800">
-              <div className="flex items-start space-x-4 mb-6">
-                <div className="flex space-x-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+          <div className="h-[60rem] flex items-center justify-center relative p-2 md:p-20">
+            <div className="py-10 md:py-40 w-full relative">
+              <div className="max-w-5xl mx-auto text-center">
+                <h1 className="text-4xl font-semibold text-center mb-10 text-white">
+                  Transform Your <br />
+                  <span className="text-6xl font-bold">Business Strategy</span>
+                </h1>
+              </div>
+              
+              <div className="max-w-5xl -mt-12 mx-auto h-[30rem] md:h-[40rem] w-full border-2 rounded-[30px] animated-border p-2 md:p-6 bg-[#222222] shadow-2xl">
+                <div className="h-full w-full rounded-2xl bg-[#1D1C20] overflow-hidden">
+                  <div className="flex items-start space-x-4 mb-6 p-4">
+                    <div className="flex space-x-2">
+                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                  </div>
+                  <div className="space-y-4 p-6">
+                    {[1, 2, 3, 4, 5].map((item) => (
+                      <div 
+                        key={item} 
+                        className="flex items-center space-x-4 p-3 rounded-lg bg-gray-900/50 border border-gray-800"
+                      >
+                        <div className="w-4 h-4 rounded-full bg-blue-500/20"></div>
+                        <div className="flex-1">
+                          <div className="h-2.5 w-24 bg-gray-700 rounded"></div>
+                        </div>
+                        <div className="w-12 h-2.5 bg-gray-700 rounded"></div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-              <div className="space-y-4">
-                {[1, 2, 3, 4, 5].map((item) => (
-                  <div 
-                    key={item} 
-                    className="flex items-center space-x-4 p-3 rounded-lg bg-gray-900/50 border border-gray-800"
-                  >
-                    <div className="w-4 h-4 rounded-full bg-blue-500/20"></div>
-                    <div className="flex-1">
-                      <div className="h-2.5 w-24 bg-gray-700 rounded"></div>
-                    </div>
-                    <div className="w-12 h-2.5 bg-gray-700 rounded"></div>
-                  </div>
-                ))}
-              </div>
             </div>
-          </ContainerScroll>
+          </div>
 
           <section className="relative overflow-hidden py-20">
             <div className="max-w-3xl mx-auto px-4 relative z-10">
