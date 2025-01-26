@@ -74,7 +74,7 @@ const LandingPage = () => {
             </div>
           </ContainerScroll>
 
-          <section className="relative overflow-hidden">
+          <section className="relative overflow-hidden py-20">
             <div className="max-w-3xl mx-auto px-4 relative z-10">
               <div className="grid md:grid-cols-3 gap-8">
                 {[
