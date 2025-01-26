@@ -69,13 +69,30 @@ export default {
           "100%": { transform: "translate(0px, 0px) scale(1)" },
         },
         "border-glow": {
-          "0%, 100%": {
+          "0%": {
             "border-color": "rgba(147, 51, 234, 0.5)",
-            "box-shadow": "0 0 20px rgba(147, 51, 234, 0.3)"
+            "box-shadow": "0 0 20px rgba(147, 51, 234, 0.3)",
+            "filter": "brightness(1)"
+          },
+          "25%": {
+            "border-color": "rgba(79, 70, 229, 0.5)",
+            "box-shadow": "20px 0 30px rgba(79, 70, 229, 0.4)",
+            "filter": "brightness(1.2)"
           },
           "50%": {
+            "border-color": "rgba(147, 51, 234, 0.5)",
+            "box-shadow": "0 20px 30px rgba(147, 51, 234, 0.3)",
+            "filter": "brightness(1)"
+          },
+          "75%": {
             "border-color": "rgba(79, 70, 229, 0.5)",
-            "box-shadow": "0 0 30px rgba(79, 70, 229, 0.4)"
+            "box-shadow": "-20px 0 30px rgba(79, 70, 229, 0.4)",
+            "filter": "brightness(1.2)"
+          },
+          "100%": {
+            "border-color": "rgba(147, 51, 234, 0.5)",
+            "box-shadow": "0 0 20px rgba(147, 51, 234, 0.3)",
+            "filter": "brightness(1)"
           }
         },
         "device-border": {
@@ -107,7 +124,7 @@ export default {
         float: "float 8s ease-in-out infinite",
         "fade-up": "fade-up 0.5s ease-out forwards",
         blob: "blob 7s infinite",
-        "border-glow": "border-glow 3s ease-in-out infinite",
+        "border-glow": "border-glow 4s ease-in-out infinite",
         "device-border": "device-border 8s linear infinite"
       },
     },
