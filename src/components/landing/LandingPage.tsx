@@ -20,38 +20,42 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <BackgroundGradientAnimation
-      gradientBackgroundStart="rgb(25, 25, 25)"
-      gradientBackgroundEnd="rgb(0, 0, 0)"
-      firstColor="18, 113, 255"
-      secondColor="221, 74, 255"
-      thirdColor="100, 220, 255"
-      fourthColor="47, 51, 234"
-      fifthColor="79, 70, 229"
-      pointerColor="140, 100, 255"
-      size="100%"
-      blendingValue="hard-light"
-      containerClassName="min-h-screen"
-    >
-      <div className="min-h-screen flex flex-col">
-        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-gray-900/80 backdrop-blur-lg' : 'bg-transparent'
-        }`}>
-          <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-            <div className="flex items-center">
-              <img 
-                src="/lovable-uploads/de1f185a-ffc5-43ec-9b47-07e182ea0a82.png" 
-                alt="Mappen Logo" 
-                className="h-6 w-auto animate-float"
-              />
+    <div className="relative min-h-screen w-full overflow-auto">
+      <BackgroundGradientAnimation
+        gradientBackgroundStart="rgb(25, 25, 25)"
+        gradientBackgroundEnd="rgb(0, 0, 0)"
+        firstColor="18, 113, 255"
+        secondColor="221, 74, 255"
+        thirdColor="100, 220, 255"
+        fourthColor="47, 51, 234"
+        fifthColor="79, 70, 229"
+        pointerColor="140, 100, 255"
+        size="100%"
+        blendingValue="hard-light"
+        containerClassName="fixed inset-0 h-screen w-screen"
+      >
+        <div className="relative z-10">
+          <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+            isScrolled ? 'bg-gray-900/80 backdrop-blur-lg' : 'bg-transparent'
+          }`}>
+            <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+              <div className="flex items-center">
+                <img 
+                  src="/lovable-uploads/de1f185a-ffc5-43ec-9b47-07e182ea0a82.png" 
+                  alt="Mappen Logo" 
+                  className="h-6 w-auto animate-float"
+                />
+              </div>
+              <button className="px-4 py-2 bg-[#6E59A5] hover:bg-[#5D4B8C] text-white rounded-lg transition-all text-sm animate-fade-up">
+                Join Waitlist
+              </button>
             </div>
-            <button className="px-4 py-2 bg-[#6E59A5] hover:bg-[#5D4B8C] text-white rounded-lg transition-all text-sm animate-fade-up">
-              Join Waitlist
-            </button>
-          </div>
-        </nav>
-        
-        <div className="flex-grow flex flex-col">
+          </nav>
+        </div>
+      </BackgroundGradientAnimation>
+
+      <main className="relative z-10">
+        <div className="min-h-screen flex flex-col">
           <Hero />
 
           <ContainerScroll
@@ -151,8 +155,8 @@ const LandingPage = () => {
         </div>
 
         <FloatingFeedbackButton />
-      </div>
-    </BackgroundGradientAnimation>
+      </main>
+    </div>
   );
 };
 
