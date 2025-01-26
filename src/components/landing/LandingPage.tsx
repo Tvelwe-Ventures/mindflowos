@@ -6,6 +6,7 @@ import { IntegrationsSection } from './IntegrationsSection';
 import EnhancedAIFeatures from '@/components/features/EnhancedAIFeatures';
 import { FloatingFeedbackButton } from '@/components/feedback/FloatingFeedbackButton';
 import { BackgroundGradientAnimation } from '@/components/ui/background-gradient-animation';
+import { ContainerScroll } from '@/components/ui/container-scroll';
 
 const LandingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,6 +53,22 @@ const LandingPage = () => {
         
         <div className="flex-grow flex flex-col">
           <Hero />
+
+          <ContainerScroll
+            titleComponent={
+              <h1 className="text-4xl font-semibold text-center mb-10 text-white">
+                Transform Your Business Strategy
+              </h1>
+            }
+          >
+            <div className="h-full w-full bg-[#1D1C20] rounded-lg p-6">
+              <img
+                src="/lovable-uploads/de1f185a-ffc5-43ec-9b47-07e182ea0a82.png"
+                alt="Mappen Dashboard"
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+          </ContainerScroll>
 
           <section className="relative overflow-hidden">
             <div className="max-w-3xl mx-auto px-4 relative z-10">
