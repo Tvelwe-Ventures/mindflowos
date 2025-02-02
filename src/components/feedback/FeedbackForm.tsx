@@ -5,17 +5,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
-import { createClient } from '@supabase/supabase-js';
+import { supabase } from "@/integrations/supabase/client"; // Import the existing client
 import { FeedbackTypeSelector } from './FeedbackTypeSelector';
 import { CategorySelector } from './CategorySelector';
 import { TagSelector } from './TagSelector';
 import { FeedbackCategory, FeedbackTag, FeedbackFormProps } from './types';
 
-export const FeedbackForm = ({ 
-  onSubmitSuccess,
-  supabaseUrl = import.meta.env.VITE_SUPABASE_URL,
-  supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY 
-}: FeedbackFormProps) => {
+export const FeedbackForm = ({ onSubmitSuccess }: FeedbackFormProps) => {
   const [email, setEmail] = useState("");
   const [feedbackType, setFeedbackType] = useState("general");
   const [message, setMessage] = useState("");
@@ -26,8 +22,6 @@ export const FeedbackForm = ({
   const [categories, setCategories] = useState<FeedbackCategory[]>([]);
   const [tags, setTags] = useState<FeedbackTag[]>([]);
   const { toast } = useToast();
-
-  const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
   useEffect(() => {
     const fetchCategoriesAndTags = async () => {
