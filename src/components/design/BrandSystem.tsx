@@ -18,7 +18,7 @@ const BrandSystem = () => {
             <div className="mb-8">
               <Logo size="md" letterSpacing="-0.04" />
               <div className="text-sm text-gray-600 mt-2">
-                Space Grotesk / SemiBold 600 / Tracking -0.04em
+                Bricolage Grotesque / SemiBold 600 / Tracking -0.04em
               </div>
             </div>
 
@@ -31,7 +31,7 @@ const BrandSystem = () => {
                     Transform Your Business Strategy
                   </h1>
                   <div className="text-sm text-gray-600">
-                    H1 - Space Grotesk Bold 700 / 36px / -0.02em tracking
+                    H1 - Bricolage Grotesque Bold 600 / 36px / -0.02em tracking
                   </div>
                 </div>
                 <div>
@@ -39,7 +39,7 @@ const BrandSystem = () => {
                     Visual Planning Made Simple
                   </h2>
                   <div className="text-sm text-gray-600">
-                    H2 - Space Grotesk SemiBold 600 / 30px / -0.02em tracking
+                    H2 - Bricolage Grotesque SemiBold 500 / 30px / -0.02em tracking
                   </div>
                 </div>
                 <div>
@@ -47,15 +47,7 @@ const BrandSystem = () => {
                     AI-Powered Insights
                   </h3>
                   <div className="text-sm text-gray-600">
-                    H3 - Space Grotesk Medium 500 / 24px / -0.01em tracking
-                  </div>
-                </div>
-                <div>
-                  <h4 className={`${typography.headings.h4} mb-2`}>
-                    Seamless Collaboration
-                  </h4>
-                  <div className="text-sm text-gray-600">
-                    H4 - Space Grotesk Medium 500 / 20px / -0.01em tracking
+                    H3 - Bricolage Grotesque Medium 400 / 24px / -0.01em tracking
                   </div>
                 </div>
               </div>
@@ -71,7 +63,7 @@ const BrandSystem = () => {
                     Visualize, adapt, and execute your strategy in real-time.
                   </p>
                   <div className="text-sm text-gray-600">
-                    Large - Space Grotesk Regular 400 / 18px / 1.6 line-height
+                    Large - Bricolage Grotesque Regular 400 / 18px / 1.6 line-height
                   </div>
                 </div>
                 <div>
@@ -80,7 +72,7 @@ const BrandSystem = () => {
                     interactive mind maps and AI-powered insights.
                   </p>
                   <div className="text-sm text-gray-600">
-                    Base - Space Grotesk Regular 400 / 16px / 1.6 line-height
+                    Base - Bricolage Grotesque Regular 400 / 16px / 1.6 line-height
                   </div>
                 </div>
                 <div>
@@ -89,7 +81,7 @@ const BrandSystem = () => {
                     business planning.
                   </p>
                   <div className="text-sm text-gray-600">
-                    Small - Space Grotesk Regular 400 / 14px / 1.6 line-height
+                    Small - Bricolage Grotesque Regular 400 / 14px / 1.6 line-height
                   </div>
                 </div>
               </div>
@@ -123,7 +115,7 @@ const BrandSystem = () => {
               <h3 className="text-sm font-medium text-gray-700 mb-4">Feature Cards</h3>
               <div className="bg-white p-6 rounded-xl border max-w-sm">
                 <Sparkles className="h-6 w-6 text-blue-600 mb-4" />
-                <h3 className={`${typography.headings.h4} mb-2`}>
+                <h3 className={`${typography.headings.h3} mb-2`}>
                   AI-Powered Insights
                 </h3>
                 <p className={`${typography.body.base} text-gray-600`}>
