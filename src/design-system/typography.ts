@@ -1,9 +1,8 @@
 export const typography = {
   headings: {
-    h1: 'text-4xl font-bold tracking-tight',
-    h2: 'text-3xl font-semibold tracking-tight',
-    h3: 'text-2xl font-medium tracking-normal',
-    h4: 'text-xl font-medium tracking-normal'
+    h1: 'text-4xl font-bold tracking-tight font-bricolage',
+    h2: 'text-3xl font-semibold tracking-tight font-bricolage',
+    h3: 'text-2xl font-medium tracking-normal font-bricolage'
   },
   body: {
     large: 'text-lg font-normal leading-relaxed',
